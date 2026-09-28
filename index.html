@@ -4,7 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Flavour House Multicuisine Restaurant</title>
+    <title>Flavour House | Multicuisine Restaurant in Kovilpatti</title>
+    <meta name="description"
+        content="Flavour House serves 300+ multicuisine dishes: South Indian, Chinese, Continental, vegetarian and seafood, in Kovilpatti, Tamil Nadu. Open daily 11 AM to 11 PM.">
+    <link rel="canonical" href="https://flavour-house-ruddy.vercel.app/">
+    <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,9 +28,15 @@
             --sans: 'Work Sans', sans-serif;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: var(--sans);
@@ -36,9 +46,16 @@
             -webkit-text-size-adjust: 100%;
         }
 
-        a { text-decoration: none; color: inherit; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        img, svg { max-width: 100%; display: block; }
+        img,
+        svg {
+            max-width: 100%;
+            display: block;
+        }
 
         .wrap {
             max-width: 1100px;
@@ -46,7 +63,9 @@
             padding: 0 20px;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: var(--serif);
             font-weight: 600;
             letter-spacing: .2px;
@@ -79,7 +98,10 @@
             gap: 8px;
         }
 
-        .brand svg { width: 24px; height: 24px; }
+        .brand svg {
+            width: 24px;
+            height: 24px;
+        }
 
         nav.links {
             display: flex;
@@ -228,8 +250,15 @@
         }
 
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero .eyebrow-line,
@@ -239,10 +268,22 @@
             opacity: 0;
             animation: fadeUp .8s cubic-bezier(.3, .6, .3, 1) forwards;
         }
-        .hero .eyebrow-line { animation-delay: .1s; }
-        .hero h1 { animation-delay: .25s; }
-        .hero p.lede { animation-delay: .45s; }
-        .hero .cta { animation-delay: .65s; }
+
+        .hero .eyebrow-line {
+            animation-delay: .1s;
+        }
+
+        .hero h1 {
+            animation-delay: .25s;
+        }
+
+        .hero p.lede {
+            animation-delay: .45s;
+        }
+
+        .hero .cta {
+            animation-delay: .65s;
+        }
 
         .hero-visual {
             width: 100%;
@@ -275,7 +316,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(15,35,24,.08), rgba(15,35,24,.02) 55%, rgba(15,35,24,.12));
+            background: linear-gradient(180deg, rgba(15, 35, 24, .08), rgba(15, 35, 24, .02) 55%, rgba(15, 35, 24, .12));
             pointer-events: none;
             z-index: 1;
         }
@@ -289,7 +330,7 @@
             color: var(--cream);
             padding: 7px 11px;
             border-radius: 6px;
-            border: 1px solid rgba(214,163,77,.55);
+            border: 1px solid rgba(214, 163, 77, .55);
             font-family: var(--serif);
             font-size: 13px;
             letter-spacing: .2px;
@@ -310,7 +351,7 @@
             border: 2.5px solid #fff;
             border-radius: 50%;
             margin: 0 auto 5px;
-            box-shadow: 0 2px 8px rgba(0,0,0,.4), 0 0 0 4px rgba(214,163,77,.25);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .4), 0 0 0 4px rgba(214, 163, 77, .25);
             position: relative;
         }
 
@@ -319,13 +360,20 @@
             position: absolute;
             inset: -6px;
             border-radius: 50%;
-            border: 2px solid rgba(214,163,77,.6);
+            border: 2px solid rgba(214, 163, 77, .6);
             animation: ring 2.6s ease-out infinite;
         }
 
         @keyframes ring {
-            0% { transform: scale(.45); opacity: 1; }
-            100% { transform: scale(1.8); opacity: 0; }
+            0% {
+                transform: scale(.45);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.8);
+                opacity: 0;
+            }
         }
 
         .pin .label {
@@ -336,19 +384,38 @@
             line-height: 1.25;
             color: #fff;
             white-space: nowrap;
-            background: rgba(15,35,24,.94);
+            background: rgba(15, 35, 24, .94);
             padding: 4px 7px;
             border-radius: 5px;
-            border: 1px solid rgba(214,163,77,.65);
-            box-shadow: 0 3px 10px rgba(0,0,0,.25);
+            border: 1px solid rgba(214, 163, 77, .65);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
         }
 
         /* Approximate positions for Wikimedia world map */
-        .pin.south-india { left: 67.5%; top: 62%; }
-        .pin.china       { left: 76%; top: 40%; }
-        .pin.italy       { left: 51%; top: 37%; }
-        .pin.thailand    { left: 72.5%; top: 55%; }
-        .pin.seafood     { left: 58%; top: 62%; }
+        .pin.south-india {
+            left: 67.5%;
+            top: 62%;
+        }
+
+        .pin.china {
+            left: 76%;
+            top: 40%;
+        }
+
+        .pin.italy {
+            left: 51%;
+            top: 37%;
+        }
+
+        .pin.thailand {
+            left: 72.5%;
+            top: 55%;
+        }
+
+        .pin.seafood {
+            left: 58%;
+            top: 62%;
+        }
 
         .hero-visual .cap {
             margin-top: 12px;
@@ -360,15 +427,27 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .hero .eyebrow-line, .hero h1, .hero p.lede, .hero .cta, .hero-visual {
+
+            .hero .eyebrow-line,
+            .hero h1,
+            .hero p.lede,
+            .hero .cta,
+            .hero-visual {
                 animation: none !important;
                 opacity: 1 !important;
             }
-            .pin .dot::after { animation: none; }
+
+            .pin .dot::after {
+                animation: none;
+            }
         }
 
         /* SHARED */
-        .head { max-width: 52ch; margin-bottom: 28px; }
+        .head {
+            max-width: 52ch;
+            margin-bottom: 28px;
+        }
+
         .head .kicker {
             font-size: 13.5px;
             color: var(--moss);
@@ -376,18 +455,37 @@
             font-style: italic;
             margin-bottom: 4px;
         }
-        .head h2 { font-size: clamp(26px, 5vw, 38px); }
-        .head p { margin-top: 10px; color: #4a5a4f; line-height: 1.65; font-size: 15px; }
+
+        .head h2 {
+            font-size: clamp(26px, 5vw, 38px);
+        }
+
+        .head p {
+            margin-top: 10px;
+            color: #4a5a4f;
+            line-height: 1.65;
+            font-size: 15px;
+        }
 
         /* ABOUT */
-        .about { padding: 50px 0; }
+        .about {
+            padding: 50px 0;
+        }
+
         .about .wrap {
             display: grid;
             grid-template-columns: .9fr 1.1fr;
             gap: 40px;
             align-items: start;
         }
-        .about-visual svg { width: 100%; height: auto; max-width: 260px; margin: 0 auto; }
+
+        .about-visual svg {
+            width: 100%;
+            height: auto;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
         .about-copy p {
             color: #3d4a41;
             line-height: 1.7;
@@ -401,9 +499,19 @@
             color: var(--cream);
             padding: 50px 0;
         }
-        .special .head p { color: rgba(245, 241, 230, .72); }
-        .special .head .kicker { color: var(--gold); }
-        .special-list { border-top: 1px solid var(--line); }
+
+        .special .head p {
+            color: rgba(245, 241, 230, .72);
+        }
+
+        .special .head .kicker {
+            color: var(--gold);
+        }
+
+        .special-list {
+            border-top: 1px solid var(--line);
+        }
+
         .special-row {
             display: grid;
             grid-template-columns: 48px 1fr auto;
@@ -412,14 +520,24 @@
             padding: 16px 0;
             border-bottom: 1px solid var(--line);
         }
-        .special-row .glyph { width: 36px; height: 36px; }
-        .special-row h3 { font-size: 17px; margin-bottom: 3px; }
+
+        .special-row .glyph {
+            width: 36px;
+            height: 36px;
+        }
+
+        .special-row h3 {
+            font-size: 17px;
+            margin-bottom: 3px;
+        }
+
         .special-row p {
             font-size: 13.5px;
             color: rgba(245, 241, 230, .65);
             max-width: 52ch;
             line-height: 1.45;
         }
+
         .special-row .tag {
             font-family: var(--serif);
             font-style: italic;
@@ -429,50 +547,75 @@
         }
 
         /* MENU */
-        .menu { padding: 55px 0; }
-        .vine { position: relative; }
+        .menu {
+            padding: 55px 0;
+        }
+
+        .vine {
+            position: relative;
+        }
+
         .vine::before {
             content: "";
             position: absolute;
             left: 50%;
-            top: 0; bottom: 0;
+            top: 0;
+            bottom: 0;
             width: 2px;
             background: var(--moss-dim);
             opacity: .35;
             transform: translateX(-1px);
         }
+
         .branch {
             position: relative;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0 40px;
-            padding: 32px 0;          /* more vertical space around each category */
+            padding: 32px 0;
+            /* more vertical space around each category */
         }
-        .branch:nth-child(even) .cat-label { order: 2; text-align: left; }
-        .branch:nth-child(even) .cat-items { order: 1; text-align: right; }
+
+        .branch:nth-child(even) .cat-label {
+            order: 2;
+            text-align: left;
+        }
+
+        .branch:nth-child(even) .cat-items {
+            order: 1;
+            text-align: right;
+        }
+
         .cat-label {
             align-self: start;
             padding-top: 2px;
-            margin-bottom: 14px;      /* gap below category title */
+            margin-bottom: 14px;
+            /* gap below category title */
         }
+
         .cat-label .num {
             font-family: var(--serif);
             font-style: italic;
             color: var(--moss);
             font-size: 13px;
             display: block;
-            margin-bottom: 6px;       /* gap between "Starters" and "Small plates" */
+            margin-bottom: 6px;
+            /* gap between "Starters" and "Small plates" */
         }
+
         .cat-label h3 {
             font-size: 20px;
             margin-bottom: 0;
         }
+
         .cat-items {
             display: flex;
             flex-direction: column;
-            gap: 12px;                /* space between dishes */
+            gap: 12px;
+            /* space between dishes */
             padding-top: 4px;
         }
+
         .dish {
             display: flex;
             justify-content: space-between;
@@ -480,12 +623,17 @@
             border-bottom: 1px dashed #c9c2ac;
             padding-bottom: 10px;
         }
-        .branch:nth-child(even) .dish { flex-direction: row-reverse; }
+
+        .branch:nth-child(even) .dish {
+            flex-direction: row-reverse;
+        }
+
         .dish h4 {
             font-size: 14.5px;
             font-weight: 500;
             font-family: var(--sans);
         }
+
         .dish span {
             font-size: 12px;
             color: #7a7264;
@@ -493,25 +641,32 @@
             font-family: var(--serif);
             white-space: nowrap;
         }
+
         .menu-note {
             text-align: center;
             margin-top: 36px;
             font-size: 14px;
             color: #6b6355;
         }
+
         .menu-note a {
             color: var(--moss);
             border-bottom: 1px solid var(--moss);
         }
 
         /* COLLAGE */
-        .collage { padding: 40px 0; }
+        .collage {
+            padding: 40px 0;
+        }
+
         .collage-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             grid-auto-rows: 110px;
-            gap: 14px;                /* more gap between images */
+            gap: 14px;
+            /* more gap between images */
         }
+
         .tile {
             position: relative;
             border-radius: 6px;
@@ -521,6 +676,7 @@
             padding: 8px;
             min-height: 110px;
         }
+
         .tile img {
             position: absolute;
             inset: 0;
@@ -528,6 +684,7 @@
             height: 100%;
             object-fit: cover;
         }
+
         .tile span {
             position: relative;
             z-index: 1;
@@ -535,15 +692,43 @@
             font-style: italic;
             font-size: 12px;
             color: var(--cream);
-            text-shadow: 0 1px 4px rgba(0,0,0,.5);
+            text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
         }
-        .tile.a { grid-column: span 3; grid-row: span 2; }
-        .tile.b { grid-column: span 3; grid-row: span 1; }
-        .tile.c { grid-column: span 2; grid-row: span 2; }
-        .tile.d { grid-column: span 2; grid-row: span 1; }
-        .tile.e { grid-column: span 2; grid-row: span 1; }
-        .tile.f { grid-column: span 2; grid-row: span 2; }
-        .tile.g { grid-column: span 2; grid-row: span 1; }
+
+        .tile.a {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        .tile.b {
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+
+        .tile.c {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .tile.d {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .tile.e {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .tile.f {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .tile.g {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
 
         /* GALLERY */
         .gallery {
@@ -551,8 +736,15 @@
             padding: 50px 0 55px;
             color: var(--cream);
         }
-        .gallery .head p { color: rgba(245, 241, 230, .7); }
-        .gallery .head .kicker { color: var(--gold); }
+
+        .gallery .head p {
+            color: rgba(245, 241, 230, .7);
+        }
+
+        .gallery .head .kicker {
+            color: var(--gold);
+        }
+
         .strip {
             display: flex;
             gap: 12px;
@@ -561,17 +753,20 @@
             scrollbar-width: thin;
             -webkit-overflow-scrolling: touch;
         }
+
         .pane {
             flex: 0 0 190px;
             height: 260px;
             border-radius: 4px;
             overflow: hidden;
         }
+
         .pane img {
             width: 100%;
             height: 220px;
             object-fit: cover;
         }
+
         .pane span {
             font-family: var(--serif);
             font-style: italic;
@@ -582,7 +777,11 @@
         }
 
         /* MAP */
-        .map-section { padding: 45px 0; background: var(--cream); }
+        .map-section {
+            padding: 45px 0;
+            background: var(--cream);
+        }
+
         .map-frame {
             border-radius: 10px;
             overflow: hidden;
@@ -590,6 +789,7 @@
             box-shadow: 0 16px 32px rgba(15, 35, 24, .08);
             height: 320px;
         }
+
         .map-frame iframe {
             width: 100%;
             height: 100%;
@@ -602,11 +802,13 @@
             color: var(--cream);
             padding: 45px 0 20px;
         }
+
         .foot-grid {
             display: grid;
             grid-template-columns: 1.3fr 1fr 1fr 1fr;
             gap: 28px;
         }
+
         .foot-grid h3 {
             font-size: 14px;
             font-family: var(--sans);
@@ -615,13 +817,20 @@
             margin-bottom: 12px;
             letter-spacing: .3px;
         }
-        .foot-grid p, .foot-grid li {
+
+        .foot-grid p,
+        .foot-grid li {
             font-size: 13.5px;
             line-height: 1.65;
             color: rgba(245, 241, 230, .75);
             list-style: none;
         }
-        .foot-grid .brand { color: var(--cream); margin-bottom: 10px; }
+
+        .foot-grid .brand {
+            color: var(--cream);
+            margin-bottom: 10px;
+        }
+
         .bottom-bar {
             margin-top: 36px;
             padding-top: 16px;
@@ -633,7 +842,9 @@
 
         /* ========== MOBILE ========== */
         @media (max-width: 800px) {
-            .wrap { padding: 0 16px; }
+            .wrap {
+                padding: 0 16px;
+            }
 
             nav.links {
                 position: fixed;
@@ -647,75 +858,141 @@
                 gap: 16px;
                 transition: right .35s ease;
                 z-index: 60;
-                box-shadow: -8px 0 30px rgba(0,0,0,.4);
+                box-shadow: -8px 0 30px rgba(0, 0, 0, .4);
             }
-            nav.links.open { right: 0; }
+
+            nav.links.open {
+                right: 0;
+            }
+
             nav.links a {
                 font-size: 15px;
                 padding: 4px 0;
             }
-            .menu-btn { display: block; }
 
-            .hero { padding: 36px 0 40px; }
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 36px 0 40px;
+            }
+
             .hero .wrap {
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
-            .hero h1 { max-width: none; }
+
+            .hero h1 {
+                max-width: none;
+            }
+
             .hero-visual {
                 max-width: 100%;
                 margin: 0 auto;
             }
-            .cuisine-map { aspect-ratio: 4 / 3; }
-            .map-title { font-size: 12px; padding: 6px 10px; }
+
+            .cuisine-map {
+                aspect-ratio: 4 / 3;
+            }
+
+            .map-title {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+
             .pin .label {
                 font-size: 9px;
                 padding: 3px 6px;
-                display: inline-block;   /* always show labels */
+                display: inline-block;
+                /* always show labels */
             }
-            .pin .dot { width: 11px; height: 11px; border-width: 2px; }
-            .hero-visual .cap { margin-top: 10px; }
 
-            .about { padding: 36px 0; }
+            .pin .dot {
+                width: 11px;
+                height: 11px;
+                border-width: 2px;
+            }
+
+            .hero-visual .cap {
+                margin-top: 10px;
+            }
+
+            .about {
+                padding: 36px 0;
+            }
+
             .about .wrap {
                 grid-template-columns: 1fr;
                 gap: 20px;
                 text-align: center;
             }
-            .about-visual { order: -1; }
-            .about-visual svg { max-width: 180px; }
-            .about-copy .head { margin-left: auto; margin-right: auto; margin-bottom: 14px; }
-            .about-copy p { margin-bottom: 10px; }
 
-            .special { padding: 36px 0; }
+            .about-visual {
+                order: -1;
+            }
+
+            .about-visual svg {
+                max-width: 180px;
+            }
+
+            .about-copy .head {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 14px;
+            }
+
+            .about-copy p {
+                margin-bottom: 10px;
+            }
+
+            .special {
+                padding: 36px 0;
+            }
+
             .special-row {
                 grid-template-columns: 40px 1fr;
                 gap: 12px;
                 padding: 14px 0;
             }
+
             .special-row .tag {
                 grid-column: 2;
                 margin-top: 2px;
             }
 
             /* MENU – more space around category titles */
-            .menu { padding: 40px 0; }
-            .vine::before { left: 6px; }
+            .menu {
+                padding: 40px 0;
+            }
+
+            .vine::before {
+                left: 6px;
+            }
+
             .branch,
             .branch:nth-child(even) {
                 grid-template-columns: 1fr;
-                padding: 28px 6px 28px 36px;   /* more top/bottom gap */
+                padding: 28px 6px 28px 36px;
+                /* more top/bottom gap */
             }
+
             .branch:nth-child(even) .cat-label,
             .branch:nth-child(even) .cat-items {
                 order: initial;
                 text-align: left;
             }
-            .branch:nth-child(even) .dish { flex-direction: row; }
+
+            .branch:nth-child(even) .dish {
+                flex-direction: row;
+            }
+
             .cat-label {
                 position: relative;
-                margin-bottom: 16px;         /* clear gap below title */
+                margin-bottom: 16px;
+                /* clear gap below title */
             }
+
             .cat-label::before {
                 content: "";
                 position: absolute;
@@ -726,53 +1003,118 @@
                 border-radius: 50%;
                 background: var(--gold);
             }
-            .cat-label .num { margin-bottom: 6px; }
-            .cat-label h3 { font-size: 18px; }
-            .cat-items { gap: 10px; padding-top: 2px; }
-            .menu-note { margin-top: 28px; }
+
+            .cat-label .num {
+                margin-bottom: 6px;
+            }
+
+            .cat-label h3 {
+                font-size: 18px;
+            }
+
+            .cat-items {
+                gap: 10px;
+                padding-top: 2px;
+            }
+
+            .menu-note {
+                margin-top: 28px;
+            }
 
             /* COLLAGE – more gap between images */
-            .collage { padding: 32px 0; }
+            .collage {
+                padding: 32px 0;
+            }
+
             .collage-grid {
                 grid-template-columns: repeat(2, 1fr);
                 grid-auto-rows: 120px;
-                gap: 20px;                   /* increased gap */
+                gap: 20px;
+                /* increased gap */
             }
-            .tile.a, .tile.b, .tile.c, .tile.d,
-            .tile.e, .tile.f, .tile.g {
+
+            .tile.a,
+            .tile.b,
+            .tile.c,
+            .tile.d,
+            .tile.e,
+            .tile.f,
+            .tile.g {
                 grid-column: span 1;
                 grid-row: span 3;
             }
-            .tile.a, .tile.f { grid-row: span 2; }
 
-            .gallery { padding: 36px 0 40px; }
+            .tile.a,
+            .tile.f {
+                grid-row: span 2;
+            }
+
+            .gallery {
+                padding: 36px 0 40px;
+            }
+
             .pane {
                 flex: 0 0 155px;
                 height: 230px;
             }
-            .pane img { height: 190px; }
 
-            .map-section { padding: 36px 0; }
-            .map-frame { height: 250px; }
+            .pane img {
+                height: 190px;
+            }
 
-            footer { padding: 36px 0 16px; }
+            .map-section {
+                padding: 36px 0;
+            }
+
+            .map-frame {
+                height: 250px;
+            }
+
+            footer {
+                padding: 36px 0 16px;
+            }
+
             .foot-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 22px 16px;
             }
-            .bottom-bar { margin-top: 28px; padding-top: 14px; }
 
-            .head { margin-bottom: 20px; }
+            .bottom-bar {
+                margin-top: 28px;
+                padding-top: 14px;
+            }
+
+            .head {
+                margin-bottom: 20px;
+            }
         }
 
         @media (max-width: 480px) {
-            .wrap { padding: 0 14px; }
-            .nav { padding: 10px 14px; }
-            .brand { font-size: 22px; }
+            .wrap {
+                padding: 0 14px;
+            }
 
-            .hero { padding: 28px 0 32px; }
-            .hero h1 { font-size: 28px; }
-            .hero p.lede { font-size: 14px; margin-top: 12px; }
+            .nav {
+                padding: 10px 14px;
+            }
+
+            .brand {
+                font-size: 22px;
+            }
+
+            .hero {
+                padding: 28px 0 32px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p.lede {
+                font-size: 14px;
+                margin-top: 12px;
+            }
+
             .hero .cta {
                 width: 100%;
                 justify-content: center;
@@ -780,66 +1122,130 @@
                 margin-top: 18px;
             }
 
-            .cuisine-map { aspect-ratio: 1 / 1; border-radius: 10px; }
+            .cuisine-map {
+                aspect-ratio: 1 / 1;
+                border-radius: 10px;
+            }
+
             .pin .label {
                 font-size: 8px;
                 padding: 2px 5px;
-                display: inline-block;   /* keep labels visible */
+                display: inline-block;
+                /* keep labels visible */
             }
-            .pin .dot { width: 10px; height: 10px; }
 
-            .head { margin-bottom: 16px; }
-            .head h2 { font-size: 22px; }
-            .head p { margin-top: 8px; font-size: 14px; }
+            .pin .dot {
+                width: 10px;
+                height: 10px;
+            }
 
-            .about, .special, .menu, .gallery, .map-section {
+            .head {
+                margin-bottom: 16px;
+            }
+
+            .head h2 {
+                font-size: 22px;
+            }
+
+            .head p {
+                margin-top: 8px;
+                font-size: 14px;
+            }
+
+            .about,
+            .special,
+            .menu,
+            .gallery,
+            .map-section {
                 padding-top: 28px;
                 padding-bottom: 28px;
             }
 
-            .about-visual svg { max-width: 140px; }
-            .about-copy p { font-size: 14.5px; margin-bottom: 8px; }
+            .about-visual svg {
+                max-width: 140px;
+            }
+
+            .about-copy p {
+                font-size: 14.5px;
+                margin-bottom: 8px;
+            }
 
             .special-row {
                 grid-template-columns: 1fr;
                 gap: 4px;
                 padding: 12px 0;
             }
-            .special-row .glyph { display: none; }
-            .special-row h3 { font-size: 16px; }
-            .special-row .tag { margin-top: 0; }
+
+            .special-row .glyph {
+                display: none;
+            }
+
+            .special-row h3 {
+                font-size: 16px;
+            }
+
+            .special-row .tag {
+                margin-top: 0;
+            }
 
             /* MENU – still keep good gaps on small phones */
             .branch,
             .branch:nth-child(even) {
                 padding: 24px 6px 24px 32px;
             }
-            .cat-label { margin-bottom: 14px; }
-            .cat-label h3 { font-size: 17px; }
-            .cat-items { gap: 9px; }
-            .dish h4 { font-size: 14px; }
 
-            .collage { padding: 24px 0; }
+            .cat-label {
+                margin-bottom: 14px;
+            }
+
+            .cat-label h3 {
+                font-size: 17px;
+            }
+
+            .cat-items {
+                gap: 9px;
+            }
+
+            .dish h4 {
+                font-size: 14px;
+            }
+
+            .collage {
+                padding: 24px 0;
+            }
+
             .collage-grid {
                 grid-template-columns: 1fr 1fr;
                 grid-auto-rows: 100px;
-                gap: 10px;                   /* still visible gap */
+                gap: 10px;
+                /* still visible gap */
             }
 
             .pane {
                 flex: 0 0 140px;
                 height: 200px;
             }
-            .pane img { height: 165px; }
 
-            .map-frame { height: 220px; }
+            .pane img {
+                height: 165px;
+            }
 
-            footer { padding: 28px 0 14px; }
+            .map-frame {
+                height: 220px;
+            }
+
+            footer {
+                padding: 28px 0 14px;
+            }
+
             .foot-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            .bottom-bar { margin-top: 22px; }
+
+            .bottom-bar {
+                margin-top: 22px;
+            }
         }
     </style>
 </head>
@@ -883,7 +1289,8 @@
             <div>
                 <div class="eyebrow-line"></div>
                 <h1>Dine slow, <span class="accent">breathe easy</span></h1>
-                <p class="lede">A premium multicuisine table serving 300+ dishes from South India, China, Italy, Thailand and beyond — in a warm, nature-inspired room built for lingering.</p>
+                <p class="lede">A premium multicuisine table serving 300+ dishes from South India, China, Italy,
+                    Thailand and beyond — in a warm, nature-inspired room built for lingering.</p>
                 <a class="cta" href="menu.html">See the menu</a>
             </div>
 
@@ -891,8 +1298,8 @@
                 <div class="cuisine-map">
                     <div class="map-title">🌍 Our Multicuisine Origins</div>
                     <img class="map-img"
-                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png"
-                         alt="World map showing multicuisine origins">
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png"
+                        alt="World map showing multicuisine origins">
                     <div class="pin south-india">
                         <div class="dot"></div>
                         <div class="label">South India</div>
@@ -924,7 +1331,8 @@
             <div class="about-visual">
                 <svg viewBox="0 0 300 300">
                     <circle cx="150" cy="150" r="120" fill="#eae4d1" />
-                    <path d="M150 60c-45 30-65 80-40 130 15 30 40 45 40 45s25-15 40-45c25-50 5-100-40-130z" fill="#4c7a5b" opacity=".85" />
+                    <path d="M150 60c-45 30-65 80-40 130 15 30 40 45 40 45s25-15 40-45c25-50 5-100-40-130z"
+                        fill="#4c7a5b" opacity=".85" />
                     <path d="M150 90v130" stroke="#f5f1e6" stroke-width="2" />
                 </svg>
             </div>
@@ -933,9 +1341,13 @@
                     <div class="kicker">Our story</div>
                     <h2>Great food meets nature-inspired calm</h2>
                 </div>
-                <p>Flavour House Multicuisine Restaurant serves 300+ dishes from around the world — South Indian, Chinese, Continental, pure vegetarian, seafood, desserts and refreshing beverages, all from one kitchen.</p>
-                <p>Step into a Flavour House-themed room built to slow you down, whether you've come with family, friends, or to celebrate.</p>
-                <p>Where great food meets a one-of-a-kind nature-inspired experience — that's the Flavour House promise.</p>
+                <p>Flavour House Multicuisine Restaurant serves 300+ dishes from around the world — South Indian,
+                    Chinese, Continental, pure vegetarian, seafood, desserts and refreshing beverages, all from one
+                    kitchen.</p>
+                <p>Step into a Flavour House-themed room built to slow you down, whether you've come with family,
+                    friends, or to celebrate.</p>
+                <p>Where great food meets a one-of-a-kind nature-inspired experience — that's the Flavour House promise.
+                </p>
             </div>
         </div>
     </section>
@@ -1004,57 +1416,117 @@
             </div>
             <div class="vine">
                 <div class="branch">
-                    <div class="cat-label"><span class="num">Starters</span><h3>Small plates</h3></div>
+                    <div class="cat-label"><span class="num">Starters</span>
+                        <h3>Small plates</h3>
+                    </div>
                     <div class="cat-items">
-                        <div class="dish"><h4>Garlic Bread</h4><span>warm, herbed</span></div>
-                        <div class="dish"><h4>Mixed Garden Salad</h4><span>seasonal</span></div>
-                        <div class="dish"><h4>Vegetable Spring Rolls</h4><span>crisp, light</span></div>
-                        <div class="dish"><h4>Prawn Tempura</h4><span>lightly battered</span></div>
+                        <div class="dish">
+                            <h4>Garlic Bread</h4><span>warm, herbed</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Mixed Garden Salad</h4><span>seasonal</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Vegetable Spring Rolls</h4><span>crisp, light</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Prawn Tempura</h4><span>lightly battered</span>
+                        </div>
                     </div>
                 </div>
                 <div class="branch">
-                    <div class="cat-label"><span class="num">Mains</span><h3>The kitchen's core</h3></div>
+                    <div class="cat-label"><span class="num">Mains</span>
+                        <h3>The kitchen's core</h3>
+                    </div>
                     <div class="cat-items">
-                        <div class="dish"><h4>Margherita Pizza</h4><span>hand-stretched</span></div>
-                        <div class="dish"><h4>Paneer Butter Masala</h4><span>slow-simmered</span></div>
-                        <div class="dish"><h4>Grilled Herb Fish</h4><span>continental</span></div>
-                        <div class="dish"><h4>Vegetable Hakka Noodles</h4><span>wok-tossed</span></div>
+                        <div class="dish">
+                            <h4>Margherita Pizza</h4><span>hand-stretched</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Paneer Butter Masala</h4><span>slow-simmered</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Grilled Herb Fish</h4><span>continental</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Vegetable Hakka Noodles</h4><span>wok-tossed</span>
+                        </div>
                     </div>
                 </div>
                 <div class="branch">
-                    <div class="cat-label"><span class="num">Desserts</span><h3>To finish</h3></div>
+                    <div class="cat-label"><span class="num">Desserts</span>
+                        <h3>To finish</h3>
+                    </div>
                     <div class="cat-items">
-                        <div class="dish"><h4>Fresh Fruit Salad</h4><span></span></div>
-                        <div class="dish"><h4>Fruit Salad with Ice Cream</h4><span></span></div>
-                        <div class="dish"><h4>Butterscotch Ice Cream</h4><span></span></div>
-                        <div class="dish"><h4>Pista Ice Cream</h4><span></span></div>
+                        <div class="dish">
+                            <h4>Fresh Fruit Salad</h4><span></span>
+                        </div>
+                        <div class="dish">
+                            <h4>Fruit Salad with Ice Cream</h4><span></span>
+                        </div>
+                        <div class="dish">
+                            <h4>Butterscotch Ice Cream</h4><span></span>
+                        </div>
+                        <div class="dish">
+                            <h4>Pista Ice Cream</h4><span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="branch">
-                    <div class="cat-label"><span class="num">Drinks</span><h3>To sip alongside</h3></div>
+                    <div class="cat-label"><span class="num">Drinks</span>
+                        <h3>To sip alongside</h3>
+                    </div>
                     <div class="cat-items">
-                        <div class="dish"><h4>Sweet Lime Juice</h4><span></span></div>
-                        <div class="dish"><h4>Fresh Lemon Soda</h4><span>salt & sweet</span></div>
-                        <div class="dish"><h4>Sweet Lassi</h4><span></span></div>
-                        <div class="dish"><h4>Mineral Water</h4><span></span></div>
+                        <div class="dish">
+                            <h4>Sweet Lime Juice</h4><span></span>
+                        </div>
+                        <div class="dish">
+                            <h4>Fresh Lemon Soda</h4><span>salt & sweet</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Sweet Lassi</h4><span></span>
+                        </div>
+                        <div class="dish">
+                            <h4>Mineral Water</h4><span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="branch">
-                    <div class="cat-label"><span class="num">South Indian</span><h3>From the tawa</h3></div>
+                    <div class="cat-label"><span class="num">South Indian</span>
+                        <h3>From the tawa</h3>
+                    </div>
                     <div class="cat-items">
-                        <div class="dish"><h4>Kothu Parotta</h4><span>egg / veg / chicken</span></div>
-                        <div class="dish"><h4>Vegetable Kurma</h4><span>slow-cooked</span></div>
-                        <div class="dish"><h4>Paneer Tikka Masala</h4><span>house special</span></div>
-                        <div class="dish"><h4>Idli Sambar</h4><span>soft, classic</span></div>
+                        <div class="dish">
+                            <h4>Kothu Parotta</h4><span>egg / veg / chicken</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Vegetable Kurma</h4><span>slow-cooked</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Paneer Tikka Masala</h4><span>house special</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Idli Sambar</h4><span>soft, classic</span>
+                        </div>
                     </div>
                 </div>
                 <div class="branch">
-                    <div class="cat-label"><span class="num">Chinese & Continental</span><h3>Wok and grill</h3></div>
+                    <div class="cat-label"><span class="num">Chinese & Continental</span>
+                        <h3>Wok and grill</h3>
+                    </div>
                     <div class="cat-items">
-                        <div class="dish"><h4>Spicy Thai Vegetables</h4><span>wok-tossed</span></div>
-                        <div class="dish"><h4>Chilli Garlic Fried Rice</h4><span>veg / egg</span></div>
-                        <div class="dish"><h4>Mushroom Truffle Pasta</h4><span>signature</span></div>
-                        <div class="dish"><h4>Grilled Herb Chicken</h4><span>continental</span></div>
+                        <div class="dish">
+                            <h4>Spicy Thai Vegetables</h4><span>wok-tossed</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Chilli Garlic Fried Rice</h4><span>veg / egg</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Mushroom Truffle Pasta</h4><span>signature</span>
+                        </div>
+                        <div class="dish">
+                            <h4>Grilled Herb Chicken</h4><span>continental</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1069,13 +1541,20 @@
                 <h2>A food collage</h2>
             </div>
             <div class="collage-grid">
-                <div class="tile a" style="background:#173325;"><img src="images/CTM.jpg" alt="Tikka Masala"><span>Tikka Masala</span></div>
-                <div class="tile b" style="background:#2e4e39;"><img src="images/Noodles.jpg" alt="Spicy Thai Noodles"><span>Spicy Thai Noodles</span></div>
-                <div class="tile c" style="background:#0f2318;"><img src="images/butterscotch.jpg" alt="Butterscotch Ice Cream"><span>Butterscotch Ice Cream</span></div>
-                <div class="tile d" style="background:#1c3a28;"><img src="images/kothuparota.jpg" alt="Kothu Parotta"><span>Kothu Parotta</span></div>
-                <div class="tile e" style="background:#2e4e39;"><img src="images/bbq.jpg" alt="BBQ Wings"><span>BBQ Wings</span></div>
-                <div class="tile f" style="background:#173325;"><img src="images/pizza.jpg" alt="Italian Pizza"><span>Italian Pizza</span></div>
-                <div class="tile g" style="background:#0f2318;"><img src="images/Noodles.jpg" alt="Hakka Noodles"><span>Hakka Noodles</span></div>
+                <div class="tile a" style="background:#173325;"><img src="images/CTM.jpg" alt="Tikka Masala"><span>Tikka
+                        Masala</span></div>
+                <div class="tile b" style="background:#2e4e39;"><img src="images/Noodles.jpg"
+                        alt="Spicy Thai Noodles"><span>Spicy Thai Noodles</span></div>
+                <div class="tile c" style="background:#0f2318;"><img src="images/butterscotch.jpg"
+                        alt="Butterscotch Ice Cream"><span>Butterscotch Ice Cream</span></div>
+                <div class="tile d" style="background:#1c3a28;"><img src="images/kothuparota.jpg"
+                        alt="Kothu Parotta"><span>Kothu Parotta</span></div>
+                <div class="tile e" style="background:#2e4e39;"><img src="images/bbq.jpg" alt="BBQ Wings"><span>BBQ
+                        Wings</span></div>
+                <div class="tile f" style="background:#173325;"><img src="images/pizza.jpg"
+                        alt="Italian Pizza"><span>Italian Pizza</span></div>
+                <div class="tile g" style="background:#0f2318;"><img src="images/Noodles.jpg"
+                        alt="Hakka Noodles"><span>Hakka Noodles</span></div>
             </div>
         </div>
     </section>
@@ -1114,10 +1593,8 @@
                 <p>Kadalaiyur Rd, Puthukiramam, Kovilpatti, Tamil Nadu 628501</p>
             </div>
             <div class="map-frame">
-                <iframe
-                    src="https://maps.google.com/maps?q=9.1785289,77.8784456&z=16&output=embed"
-                    allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                <iframe src="https://maps.google.com/maps?q=9.1785289,77.8784456&z=16&output=embed" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                     title="Flavour House Multicuisine Restaurant location">
                 </iframe>
             </div>
@@ -1128,13 +1605,16 @@
         <div class="wrap">
             <div class="foot-grid">
                 <div>
-                    <div class="brand" style="display:flex;align-items:center;gap:8px;font-family:'Fraunces',serif;font-size:19px;font-weight:700;">
+                    <div class="brand"
+                        style="display:flex;align-items:center;gap:8px;font-family:'Fraunces',serif;font-size:19px;font-weight:700;">
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
-                            <path d="M12 2C7 6 5 11 8 16c1.5 2.4 4 3.5 4 3.5s2.5-1.1 4-3.5c3-5 1-10-4-14z" fill="#d6a34d" />
+                            <path d="M12 2C7 6 5 11 8 16c1.5 2.4 4 3.5 4 3.5s2.5-1.1 4-3.5c3-5 1-10-4-14z"
+                                fill="#d6a34d" />
                         </svg>
                         Flavour House
                     </div>
-                    <p>A premium multicuisine restaurant serving 300+ dishes — South Indian, Chinese, Continental, vegetarian & seafood — in a green, nature-inspired room.</p>
+                    <p>A premium multicuisine restaurant serving 300+ dishes — South Indian, Chinese, Continental,
+                        vegetarian & seafood — in a green, nature-inspired room.</p>
                 </div>
                 <div>
                     <h3>New on the menu</h3>
@@ -1149,7 +1629,7 @@
                     <ul>
                         <li>Kadalaiyur Rd, Puthukiramam, Kovilpatti, Tamil Nadu 628501</li>
                         <li><a href="tel:+918610600800">+91 86106 00800</a></li>
-                        <li><a href="mailto:flavourhouse@gmail.com.com">flavourhouse@gmail.com</a></li>
+                        <li><a href="mailto:flavourhouse@gmail.com">flavourhouse@gmail.com</a></li>
                     </ul>
                 </div>
                 <div>
@@ -1159,7 +1639,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="bottom-bar">Copyright &copy; 2026 Flavour House Multicuisine Restaurant. All rights reserved.</div>
+            <div class="bottom-bar">Copyright &copy; 2026 Flavour House Multicuisine Restaurant. All rights reserved.
+            </div>
         </div>
     </footer>
 
