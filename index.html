@@ -37,8 +37,15 @@
             --sans: 'Work Sans', sans-serif;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: var(--sans);
@@ -48,12 +55,30 @@
             -webkit-text-size-adjust: 100%;
         }
 
-        a { text-decoration: none; color: inherit; }
-        img, svg { max-width: 100%; display: block; }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        img,
+        svg {
+            max-width: 100%;
+            display: block;
+        }
 
-        h1, h2, h3 { font-family: var(--serif); font-weight: 600; letter-spacing: .2px; }
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--serif);
+            font-weight: 600;
+            letter-spacing: .2px;
+        }
 
         /* NAV */
         header {
@@ -63,7 +88,7 @@
             background: var(--white);
             color: var(--ink);
             border-bottom: 1px solid var(--line);
-            box-shadow: 0 1px 0 rgba(0,0,0,.03);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, .03);
         }
 
         .nav {
@@ -85,9 +110,17 @@
             color: var(--green);
         }
 
-        .brand img { width: 24px; height: 24px; object-fit: contain; }
+        .brand img {
+            width: 46px;
+            height: 46px;
+            object-fit: contain;
+        }
 
-        nav.links { display: flex; gap: 22px; font-size: 14px; }
+        nav.links {
+            display: flex;
+            gap: 22px;
+            font-size: 14px;
+        }
 
         nav.links a {
             opacity: .8;
@@ -97,7 +130,11 @@
             transition: opacity .2s, border-color .2s, color .2s;
         }
 
-        nav.links a:hover { opacity: 1; border-color: var(--gold); color: var(--green); }
+        nav.links a:hover {
+            opacity: 1;
+            border-color: var(--gold);
+            color: var(--green);
+        }
 
         .menu-btn {
             display: none;
@@ -130,13 +167,33 @@
             transition: transform .2s ease, box-shadow .2s ease;
         }
 
-        .call-fab:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(30, 77, 54, .45); background: var(--black); }
-        .call-fab svg { width: 18px; height: 18px; flex-shrink: 0; }
-        .call-fab .call-text { white-space: nowrap; }
+        .call-fab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(30, 77, 54, .45);
+            background: var(--black);
+        }
+
+        .call-fab svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .call-fab .call-text {
+            white-space: nowrap;
+        }
 
         @media (max-width: 480px) {
-            .call-fab { right: 14px; bottom: 14px; padding: 13px; border-radius: 50%; }
-            .call-fab .call-text { display: none; }
+            .call-fab {
+                right: 14px;
+                bottom: 14px;
+                padding: 13px;
+                border-radius: 50%;
+            }
+
+            .call-fab .call-text {
+                display: none;
+            }
         }
 
         /* HERO */
@@ -164,11 +221,25 @@
             align-items: center;
         }
 
-        .eyebrow-line { width: 40px; height: 2px; background: var(--gold); margin-bottom: 14px; }
+        .eyebrow-line {
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+            margin-bottom: 14px;
+        }
 
-        .hero h1 { font-size: clamp(32px, 7vw, 64px); line-height: 1.08; max-width: 12ch; color: var(--black); }
+        .hero h1 {
+            font-size: clamp(32px, 7vw, 64px);
+            line-height: 1.08;
+            max-width: 12ch;
+            color: var(--black);
+        }
 
-        .hero .accent { color: var(--green); font-style: italic; font-weight: 400; }
+        .hero .accent {
+            color: var(--green);
+            font-style: italic;
+            font-weight: 400;
+        }
 
         .hero p.lede {
             margin-top: 14px;
@@ -191,11 +262,22 @@
             min-height: 46px;
         }
 
-        .hero .cta:hover { background: var(--green); color: var(--white); border-color: var(--green); }
+        .hero .cta:hover {
+            background: var(--green);
+            color: var(--white);
+            border-color: var(--green);
+        }
 
         @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero .eyebrow-line,
@@ -206,75 +288,409 @@
             animation: fadeUp .8s cubic-bezier(.3, .6, .3, 1) forwards;
         }
 
-        .hero .eyebrow-line { animation-delay: .1s; }
-        .hero h1 { animation-delay: .25s; }
-        .hero p.lede { animation-delay: .45s; }
-        .hero .cta { animation-delay: .65s; }
+        .hero .eyebrow-line {
+            animation-delay: .1s;
+        }
 
-        .hero-visual { width: 100%; max-width: 420px; justify-self: center; margin-top: -28px; transform: translateY(-12px); }
+        .hero h1 {
+            animation-delay: .25s;
+        }
+
+        .hero p.lede {
+            animation-delay: .45s;
+        }
+
+        .hero .cta {
+            animation-delay: .65s;
+        }
+
+        .hero-visual {
+            width: 100%;
+            max-width: 420px;
+            justify-self: center;
+            margin-top: -28px;
+            transform: translateY(-12px);
+        }
 
         /* ===== LIGHT-UP SIGNBOARD (hero) ===== */
-        @keyframes fadeIn { to { opacity: 1; } }
-        @keyframes boardIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-        @keyframes neon { 0% { opacity: 0; } 10% { opacity: 1; } 14% { opacity: .15; } 22% { opacity: 1; } 28% { opacity: .1; } 34%, 100% { opacity: 1; } }
-        @keyframes glow { 0%, 100% { text-shadow: 0 0 6px rgba(243, 199, 104, .8), 0 0 18px rgba(214, 163, 77, .55); } 50% { text-shadow: 0 0 10px rgba(243, 199, 104, 1), 0 0 30px rgba(214, 163, 77, .95); } }
-        @keyframes pillOn { 0% { opacity: .16; } 40% { opacity: 1; } 55% { opacity: .5; } 100% { opacity: 1; filter: none; } }
-        @keyframes chase { 0%, 22%, 100% { filter: brightness(1); box-shadow: 0 2px 8px rgba(0, 0, 0, .4); } 10% { filter: brightness(1.4); box-shadow: 0 0 18px rgba(255, 70, 70, .95); } }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
 
-        .sign { --t0: 3.5s; width: min(100%, 290px); margin: 0 auto; filter: drop-shadow(0 16px 32px rgba(0, 0, 0, .18)); }
-        .sign-board { background: linear-gradient(180deg, #1a2e24, #0f1c16); border: 1px solid rgba(201, 162, 39, .55); border-radius: 10px; padding: 16px 12px 16px; text-align: center; opacity: 0; animation: boardIn .8s ease var(--t0) forwards; }
-        .sign-leaf { width: 42px; height: 42px; margin: 0 auto 6px; object-fit: contain; display: block; }
-        .sign-name { font-family: var(--serif); font-weight: 700; font-size: 36px; line-height: 1; color: #e0b84a; opacity: 0; text-shadow: 0 0 6px rgba(224, 184, 74, .8), 0 0 18px rgba(201, 162, 39, .55); animation: neon 1.4s steps(1) calc(var(--t0) + .3s) forwards, glow 3.2s ease-in-out calc(var(--t0) + 1.8s) infinite; }
-        .sign-sub { margin-top: 8px; padding-top: 7px; border-top: 1px solid rgba(201, 162, 39, .4); font-size: 11px; letter-spacing: .8px; color: #d4c48a; }
-        .sign-pills { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 6px; }
-        .sign-pills span { display: block; width: 88%; text-align: center; font-weight: 700; font-size: 12.5px; color: #fff; padding: 7px 0; border-radius: 999px; background: linear-gradient(180deg, #2d6a4f, #1e4d36); border: 1px solid rgba(255, 255, 255, .25); opacity: .16; filter: saturate(.4) brightness(.7); box-shadow: 0 2px 8px rgba(0, 0, 0, .4); animation: pillOn .6s ease calc(var(--t0) + .9s + var(--n) * .2s) forwards, chase 5s ease-in-out calc(var(--t0) + 3.8s + var(--n) * .3s) infinite; }
-        .hero-visual .cap { margin-top: 14px; text-align: center; font-family: var(--serif); font-style: italic; color: var(--muted); font-size: 13px; opacity: 0; animation: fadeIn 1s ease calc(var(--t0) + 3s) forwards; }
+        @keyframes boardIn {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes neon {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            14% {
+                opacity: .15;
+            }
+
+            22% {
+                opacity: 1;
+            }
+
+            28% {
+                opacity: .1;
+            }
+
+            34%,
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 6px rgba(243, 199, 104, .8), 0 0 18px rgba(214, 163, 77, .55);
+            }
+
+            50% {
+                text-shadow: 0 0 10px rgba(243, 199, 104, 1), 0 0 30px rgba(214, 163, 77, .95);
+            }
+        }
+
+        @keyframes pillOn {
+            0% {
+                opacity: .16;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            55% {
+                opacity: .5;
+            }
+
+            100% {
+                opacity: 1;
+                filter: none;
+            }
+        }
+
+        @keyframes chase {
+
+            0%,
+            22%,
+            100% {
+                filter: brightness(1);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+            }
+
+            10% {
+                filter: brightness(1.4);
+                box-shadow: 0 0 18px rgba(255, 70, 70, .95);
+            }
+        }
+
+        .sign {
+            --t0: 3.5s;
+            width: min(100%, 290px);
+            margin: 0 auto;
+            filter: drop-shadow(0 16px 32px rgba(0, 0, 0, .18));
+        }
+
+        .sign-board {
+            background: linear-gradient(180deg, #1a2e24, #0f1c16);
+            border: 1px solid rgba(201, 162, 39, .55);
+            border-radius: 10px;
+            padding: 16px 12px 16px;
+            text-align: center;
+            opacity: 0;
+            animation: boardIn .8s ease var(--t0) forwards;
+        }
+
+        .sign-leaf {
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 8px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .sign-name {
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1;
+            color: #e0b84a;
+            opacity: 0;
+            text-shadow: 0 0 6px rgba(224, 184, 74, .8), 0 0 18px rgba(201, 162, 39, .55);
+            animation: neon 1.4s steps(1) calc(var(--t0) + .3s) forwards, glow 3.2s ease-in-out calc(var(--t0) + 1.8s) infinite;
+        }
+
+        .sign-sub {
+            margin-top: 8px;
+            padding-top: 7px;
+            border-top: 1px solid rgba(201, 162, 39, .4);
+            font-size: 11px;
+            letter-spacing: .8px;
+            color: #d4c48a;
+        }
+
+        .sign-pills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .sign-pills span {
+            display: block;
+            width: 88%;
+            text-align: center;
+            font-weight: 700;
+            font-size: 12.5px;
+            color: #fff;
+            padding: 7px 0;
+            border-radius: 999px;
+            background: linear-gradient(180deg, #2d6a4f, #1e4d36);
+            border: 1px solid rgba(255, 255, 255, .25);
+            opacity: .16;
+            filter: saturate(.4) brightness(.7);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+            animation: pillOn .6s ease calc(var(--t0) + .9s + var(--n) * .2s) forwards, chase 5s ease-in-out calc(var(--t0) + 3.8s + var(--n) * .3s) infinite;
+        }
+
+        .hero-visual .cap {
+            margin-top: 14px;
+            text-align: center;
+            font-family: var(--serif);
+            font-style: italic;
+            color: var(--muted);
+            font-size: 13px;
+            opacity: 0;
+            animation: fadeIn 1s ease calc(var(--t0) + 3s) forwards;
+        }
 
         /* ===== INTRO SPLASH ===== */
-        .intro { position: fixed; inset: 0; z-index: 200; background: linear-gradient(165deg, #0f2419 0%, #1a3d2c 45%, #143024 100%); display: grid; place-items: center; text-align: center; animation: introOut .9s cubic-bezier(.7, 0, .2, 1) 2.7s forwards; cursor: pointer; }
-        .intro::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(45, 106, 79, .55), transparent 58%), radial-gradient(circle at 75% 75%, rgba(201, 162, 39, .12), transparent 42%), radial-gradient(circle at 20% 85%, rgba(201, 162, 39, .06), transparent 35%); }
-        .intro-inner { position: relative; padding: 0 20px; }
-        .intro-leaf { width: 88px; height: 88px; margin: 0 auto 14px; object-fit: contain; display: block; animation: leafFloat 3.5s ease-in-out 1.6s infinite; }
-        @keyframes leafFloat {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-6px) rotate(2deg); }
+        .intro {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            background: linear-gradient(165deg, #0f2419 0%, #1a3d2c 45%, #143024 100%);
+            display: grid;
+            place-items: center;
+            text-align: center;
+            animation: introOut .9s cubic-bezier(.7, 0, .2, 1) 2.7s forwards;
+            cursor: pointer;
         }
-        .intro-name { font-family: var(--serif); font-weight: 700; font-size: clamp(40px, 11vw, 68px); color: var(--white); line-height: 1.05; display: flex; justify-content: center; }
-        .intro-name span { display: inline-block; min-width: .28em; opacity: 0; transform: translateY(26px); animation: letterIn .6s cubic-bezier(.3, .8, .3, 1.2) forwards; animation-delay: calc(.7s + var(--k) * .07s); }
-        .intro-tag { margin-top: 10px; font-family: var(--serif); font-style: italic; font-size: clamp(16px, 4vw, 22px); color: var(--gold); opacity: 0; animation: fadeIn .8s ease 1.7s forwards; }
-        .intro-bar { width: 160px; height: 2px; margin: 22px auto 0; background: rgba(255, 255, 255, .15); overflow: hidden; }
-        .intro-bar::after { content: ""; display: block; height: 100%; background: var(--gold); transform: scaleX(0); transform-origin: left; animation: barFill 2.4s ease .2s forwards; }
-        @keyframes draw { to { stroke-dashoffset: 0; } }
-        @keyframes leafFill { to { fill-opacity: 1; } }
-        @keyframes letterIn { to { opacity: 1; transform: none; } }
-        @keyframes barFill { to { transform: scaleX(1); } }
-        @keyframes introOut { to { transform: translateY(-100%); visibility: hidden; } }
+
+        .intro::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 40%, rgba(45, 106, 79, .55), transparent 58%), radial-gradient(circle at 75% 75%, rgba(201, 162, 39, .12), transparent 42%), radial-gradient(circle at 20% 85%, rgba(201, 162, 39, .06), transparent 35%);
+        }
+
+        .intro-inner {
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .intro-leaf {
+            width: clamp(120px, 32vw, 170px);
+            height: clamp(120px, 32vw, 170px);
+            margin: 0 auto 16px;
+            object-fit: contain;
+            display: block;
+            animation: leafFloat 3.5s ease-in-out 1.6s infinite;
+        }
+
+        @keyframes leafFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-6px) rotate(2deg);
+            }
+        }
+
+        .intro-name {
+            font-family: var(--serif);
+            font-weight: 700;
+            font-size: clamp(40px, 11vw, 68px);
+            color: var(--white);
+            line-height: 1.05;
+            display: flex;
+            justify-content: center;
+        }
+
+        .intro-name span {
+            display: inline-block;
+            min-width: .28em;
+            opacity: 0;
+            transform: translateY(26px);
+            animation: letterIn .6s cubic-bezier(.3, .8, .3, 1.2) forwards;
+            animation-delay: calc(.7s + var(--k) * .07s);
+        }
+
+        .intro-tag {
+            margin-top: 10px;
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: clamp(16px, 4vw, 22px);
+            color: var(--gold);
+            opacity: 0;
+            animation: fadeIn .8s ease 1.7s forwards;
+        }
+
+        .intro-bar {
+            width: 160px;
+            height: 2px;
+            margin: 22px auto 0;
+            background: rgba(255, 255, 255, .15);
+            overflow: hidden;
+        }
+
+        .intro-bar::after {
+            content: "";
+            display: block;
+            height: 100%;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: barFill 2.4s ease .2s forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes leafFill {
+            to {
+                fill-opacity: 1;
+            }
+        }
+
+        @keyframes letterIn {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes barFill {
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        @keyframes introOut {
+            to {
+                transform: translateY(-100%);
+                visibility: hidden;
+            }
+        }
 
         /* hero starts after the splash lifts */
-        .hero .eyebrow-line { animation-delay: 3.1s; }
-        .hero h1 { animation-delay: 3.25s; }
-        .hero p.lede { animation-delay: 3.45s; }
-        .hero .punch { animation-delay: 3.6s; font-size: clamp(21px, 3.6vw, 27px); }
-        .hero .cta { animation-delay: 3.75s; }
-        .hero .accent { animation-delay: 4.3s; }
-        .hero .punch .punch-rot { transition: none; }
+        .hero .eyebrow-line {
+            animation-delay: 3.1s;
+        }
+
+        .hero h1 {
+            animation-delay: 3.25s;
+        }
+
+        .hero p.lede {
+            animation-delay: 3.45s;
+        }
+
+        .hero .punch {
+            animation-delay: 3.6s;
+            font-size: clamp(21px, 3.6vw, 27px);
+        }
+
+        .hero .cta {
+            animation-delay: 3.75s;
+        }
+
+        .hero .accent {
+            animation-delay: 4.3s;
+        }
+
+        .hero .punch .punch-rot {
+            transition: none;
+        }
 
         @media (max-width: 800px) {
-            .hero-visual .cap { margin-top: 12px; }
+            .hero-visual .cap {
+                margin-top: 12px;
+            }
         }
 
         @media (max-width: 480px) {
-            .sign { width: min(100%, 260px); }
-            .sign-name { font-size: 32px; }
-            .sign-pills span { font-size: 12px; padding: 6px 0; }
+            .sign {
+                width: min(100%, 260px);
+            }
+
+            .sign-name {
+                font-size: 32px;
+            }
+
+            .sign-pills span {
+                font-size: 12px;
+                padding: 6px 0;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .intro { display: none; }
-            .hero .eyebrow-line, .hero h1, .hero p.lede, .hero .cta { animation: none !important; opacity: 1 !important; }
-            .sign-board, .sign-name, .hero-visual .cap { animation: none; opacity: 1; }
-            .sign-pills span { animation: none; opacity: 1; filter: none; }
-            .hero-leaf-field .leaf, .intro-leaf { animation: none !important; }
+            .intro {
+                display: none;
+            }
+
+            .hero .eyebrow-line,
+            .hero h1,
+            .hero p.lede,
+            .hero .cta {
+                animation: none !important;
+                opacity: 1 !important;
+            }
+
+            .sign-board,
+            .sign-name,
+            .hero-visual .cap {
+                animation: none;
+                opacity: 1;
+            }
+
+            .sign-pills span {
+                animation: none;
+                opacity: 1;
+                filter: none;
+            }
+
+            .hero-leaf-field .leaf,
+            .intro-leaf {
+                animation: none !important;
+            }
         }
 
 
@@ -287,56 +703,172 @@
             pointer-events: none;
             z-index: 0;
         }
+
         .hero-leaf-field .leaf {
             position: absolute;
             opacity: .22;
             will-change: transform;
         }
+
         .hero-leaf-field .leaf svg {
             width: 100%;
             height: 100%;
             display: block;
         }
-        .hero-leaf-field .leaf .blade { fill: var(--green); }
-        .hero-leaf-field .leaf .vein { stroke: var(--green-mid); stroke-width: 1.5; fill: none; opacity: .95; stroke-linecap: round; }
-        .hero-leaf-field .leaf .stem { stroke: var(--green); stroke-width: 2; fill: none; stroke-linecap: round; }
-        .hero-leaf-field .leaf .vein-soft { stroke: var(--green-mid); stroke-width: 1; fill: none; opacity: .55; stroke-linecap: round; }
+
+        .hero-leaf-field .leaf .blade {
+            fill: var(--green);
+        }
+
+        .hero-leaf-field .leaf .vein {
+            stroke: var(--green-mid);
+            stroke-width: 1.5;
+            fill: none;
+            opacity: .95;
+            stroke-linecap: round;
+        }
+
+        .hero-leaf-field .leaf .stem {
+            stroke: var(--green);
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+        }
+
+        .hero-leaf-field .leaf .vein-soft {
+            stroke: var(--green-mid);
+            stroke-width: 1;
+            fill: none;
+            opacity: .55;
+            stroke-linecap: round;
+        }
 
         /* positions & sizes */
-        .hero-leaf-field .l1 { width: 160px; height: 200px; left: 4%; top: 8%; animation: swayA 9s ease-in-out infinite; }
-        .hero-leaf-field .l2 { width: 110px; height: 140px; right: 8%; top: 12%; animation: swayB 11s ease-in-out infinite; opacity: .18; }
-        .hero-leaf-field .l3 { width: 90px; height: 115px; left: 18%; bottom: 10%; animation: swayC 8s ease-in-out infinite; opacity: .16; }
-        .hero-leaf-field .l4 { width: 130px; height: 165px; right: 18%; bottom: 6%; animation: swayA 10s ease-in-out infinite reverse; opacity: .19; }
-        .hero-leaf-field .l5 { width: 70px; height: 90px; left: 42%; top: 6%; animation: swayB 7s ease-in-out infinite; opacity: .15; }
-        .hero-leaf-field .l6 { width: 100px; height: 125px; right: 38%; bottom: 18%; animation: swayC 12s ease-in-out infinite; opacity: .16; }
+        .hero-leaf-field .l1 {
+            width: 160px;
+            height: 200px;
+            left: 4%;
+            top: 8%;
+            animation: swayA 9s ease-in-out infinite;
+        }
+
+        .hero-leaf-field .l2 {
+            width: 110px;
+            height: 140px;
+            right: 8%;
+            top: 12%;
+            animation: swayB 11s ease-in-out infinite;
+            opacity: .18;
+        }
+
+        .hero-leaf-field .l3 {
+            width: 90px;
+            height: 115px;
+            left: 18%;
+            bottom: 10%;
+            animation: swayC 8s ease-in-out infinite;
+            opacity: .16;
+        }
+
+        .hero-leaf-field .l4 {
+            width: 130px;
+            height: 165px;
+            right: 18%;
+            bottom: 6%;
+            animation: swayA 10s ease-in-out infinite reverse;
+            opacity: .19;
+        }
+
+        .hero-leaf-field .l5 {
+            width: 70px;
+            height: 90px;
+            left: 42%;
+            top: 6%;
+            animation: swayB 7s ease-in-out infinite;
+            opacity: .15;
+        }
+
+        .hero-leaf-field .l6 {
+            width: 100px;
+            height: 125px;
+            right: 38%;
+            bottom: 18%;
+            animation: swayC 12s ease-in-out infinite;
+            opacity: .16;
+        }
 
         @keyframes swayA {
-            0%, 100% { transform: rotate(-12deg) translateY(0) translateX(0); }
-            30% { transform: rotate(8deg) translateY(-14px) translateX(6px); }
-            60% { transform: rotate(-6deg) translateY(8px) translateX(-4px); }
-        }
-        @keyframes swayB {
-            0%, 100% { transform: rotate(10deg) translateY(0) scale(1); }
-            40% { transform: rotate(-14deg) translateY(-10px) scale(1.05); }
-            70% { transform: rotate(6deg) translateY(6px) scale(.97); }
-        }
-        @keyframes swayC {
-            0%, 100% { transform: rotate(-4deg) translateY(0) translateX(0); }
-            50% { transform: rotate(12deg) translateY(-16px) translateX(-8px); }
+
+            0%,
+            100% {
+                transform: rotate(-12deg) translateY(0) translateX(0);
+            }
+
+            30% {
+                transform: rotate(8deg) translateY(-14px) translateX(6px);
+            }
+
+            60% {
+                transform: rotate(-6deg) translateY(8px) translateX(-4px);
+            }
         }
 
-        .hero .wrap { position: relative; z-index: 1; }
+        @keyframes swayB {
+
+            0%,
+            100% {
+                transform: rotate(10deg) translateY(0) scale(1);
+            }
+
+            40% {
+                transform: rotate(-14deg) translateY(-10px) scale(1.05);
+            }
+
+            70% {
+                transform: rotate(6deg) translateY(6px) scale(.97);
+            }
+        }
+
+        @keyframes swayC {
+
+            0%,
+            100% {
+                transform: rotate(-4deg) translateY(0) translateX(0);
+            }
+
+            50% {
+                transform: rotate(12deg) translateY(-16px) translateX(-8px);
+            }
+        }
+
+        .hero .wrap {
+            position: relative;
+            z-index: 1;
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            .hero-leaf-field .leaf { animation: none !important; }
+            .hero-leaf-field .leaf {
+                animation: none !important;
+            }
         }
+
         @media (max-width: 800px) {
-            .hero-leaf-field .l5, .hero-leaf-field .l6 { display: none; }
-            .hero-leaf-field .leaf { opacity: .18; }
+
+            .hero-leaf-field .l5,
+            .hero-leaf-field .l6 {
+                display: none;
+            }
+
+            .hero-leaf-field .leaf {
+                opacity: .18;
+            }
         }
 
         /* SHARED */
-        .head { max-width: 52ch; margin-bottom: 28px; }
+        .head {
+            max-width: 52ch;
+            margin-bottom: 28px;
+        }
 
         .head .kicker {
             font-size: 13.5px;
@@ -346,11 +878,23 @@
             margin-bottom: 4px;
         }
 
-        .head h2 { font-size: clamp(26px, 5vw, 38px); color: var(--black); }
-        .head p { margin-top: 10px; color: var(--muted); line-height: 1.65; font-size: 15px; }
+        .head h2 {
+            font-size: clamp(26px, 5vw, 38px);
+            color: var(--black);
+        }
+
+        .head p {
+            margin-top: 10px;
+            color: var(--muted);
+            line-height: 1.65;
+            font-size: 15px;
+        }
 
         /* ABOUT */
-        .about { padding: 50px 0; background: var(--white); }
+        .about {
+            padding: 50px 0;
+            background: var(--white);
+        }
 
         .about .wrap {
             display: grid;
@@ -359,16 +903,42 @@
             align-items: start;
         }
 
-        .about-visual svg { width: 100%; height: auto; max-width: 260px; margin: 0 auto; }
+        .about-visual svg {
+            width: 100%;
+            height: auto;
+            max-width: 260px;
+            margin: 0 auto;
+        }
 
-        .about-copy p { color: var(--muted); line-height: 1.7; font-size: 15.5px; margin-bottom: 12px; }
+        .about-copy p {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 15.5px;
+            margin-bottom: 12px;
+        }
 
         /* SPECIAL */
-        .special { background: var(--green); color: var(--white); padding: 50px 0; }
-        .special .head p { color: rgba(255, 255, 255, .78); }
-        .special .head .kicker { color: var(--gold); }
-        .special .head h2 { color: var(--white); }
-        .special-list { border-top: 1px solid rgba(255, 255, 255, .18); }
+        .special {
+            background: var(--green);
+            color: var(--white);
+            padding: 50px 0;
+        }
+
+        .special .head p {
+            color: rgba(255, 255, 255, .78);
+        }
+
+        .special .head .kicker {
+            color: var(--gold);
+        }
+
+        .special .head h2 {
+            color: var(--white);
+        }
+
+        .special-list {
+            border-top: 1px solid rgba(255, 255, 255, .18);
+        }
 
         .special-row {
             display: grid;
@@ -379,8 +949,16 @@
             border-bottom: 1px solid rgba(255, 255, 255, .12);
         }
 
-        .special-row .glyph { width: 36px; height: 36px; }
-        .special-row h3 { font-size: 17px; margin-bottom: 3px; color: var(--white); }
+        .special-row .glyph {
+            width: 36px;
+            height: 36px;
+        }
+
+        .special-row h3 {
+            font-size: 17px;
+            margin-bottom: 3px;
+            color: var(--white);
+        }
 
         .special-row p {
             font-size: 13.5px;
@@ -398,8 +976,14 @@
         }
 
         /* MENU */
-        .menu { padding: 55px 0; background: var(--white); }
-        .vine { position: relative; }
+        .menu {
+            padding: 55px 0;
+            background: var(--white);
+        }
+
+        .vine {
+            position: relative;
+        }
 
         .vine::before {
             content: "";
@@ -421,10 +1005,21 @@
             padding: 32px 0;
         }
 
-        .branch:nth-child(even) .cat-label { order: 2; text-align: left; }
-        .branch:nth-child(even) .cat-items { order: 1; text-align: right; }
+        .branch:nth-child(even) .cat-label {
+            order: 2;
+            text-align: left;
+        }
 
-        .cat-label { align-self: start; padding-top: 2px; margin-bottom: 14px; }
+        .branch:nth-child(even) .cat-items {
+            order: 1;
+            text-align: right;
+        }
+
+        .cat-label {
+            align-self: start;
+            padding-top: 2px;
+            margin-bottom: 14px;
+        }
 
         .cat-label .num {
             font-family: var(--serif);
@@ -435,9 +1030,18 @@
             margin-bottom: 6px;
         }
 
-        .cat-label h3 { font-size: 20px; margin-bottom: 0; color: var(--black); }
+        .cat-label h3 {
+            font-size: 20px;
+            margin-bottom: 0;
+            color: var(--black);
+        }
 
-        .cat-items { display: flex; flex-direction: column; gap: 12px; padding-top: 4px; }
+        .cat-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-top: 4px;
+        }
 
         .dish {
             display: flex;
@@ -447,9 +1051,16 @@
             padding-bottom: 10px;
         }
 
-        .branch:nth-child(even) .dish { flex-direction: row-reverse; }
+        .branch:nth-child(even) .dish {
+            flex-direction: row-reverse;
+        }
 
-        .dish h4 { font-size: 14.5px; font-weight: 500; font-family: var(--sans); color: var(--ink); }
+        .dish h4 {
+            font-size: 14.5px;
+            font-weight: 500;
+            font-family: var(--sans);
+            color: var(--ink);
+        }
 
         .dish span {
             font-size: 12px;
@@ -459,11 +1070,22 @@
             white-space: nowrap;
         }
 
-        .menu-note { text-align: center; margin-top: 36px; font-size: 14px; color: var(--muted); }
-        .menu-note a { color: var(--green); border-bottom: 1px solid var(--green); }
+        .menu-note {
+            text-align: center;
+            margin-top: 36px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .menu-note a {
+            color: var(--green);
+            border-bottom: 1px solid var(--green);
+        }
 
         /* COLLAGE */
-        .collage { padding: 40px 0; }
+        .collage {
+            padding: 40px 0;
+        }
 
         .collage-grid {
             display: grid;
@@ -482,7 +1104,13 @@
             min-height: 110px;
         }
 
-        .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .tile img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .tile span {
             position: relative;
@@ -494,19 +1122,59 @@
             text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
         }
 
-        .tile.a { grid-column: span 3; grid-row: span 2; }
-        .tile.b { grid-column: span 3; grid-row: span 1; }
-        .tile.c { grid-column: span 2; grid-row: span 2; }
-        .tile.d { grid-column: span 2; grid-row: span 1; }
-        .tile.e { grid-column: span 2; grid-row: span 1; }
-        .tile.f { grid-column: span 2; grid-row: span 2; }
-        .tile.g { grid-column: span 2; grid-row: span 1; }
+        .tile.a {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        .tile.b {
+            grid-column: span 3;
+            grid-row: span 1;
+        }
+
+        .tile.c {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .tile.d {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .tile.e {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .tile.f {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .tile.g {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
 
         /* GALLERY */
-        .gallery { background: var(--black); padding: 50px 0 55px; color: var(--white); }
-        .gallery .head p { color: rgba(255, 255, 255, .7); }
-        .gallery .head .kicker { color: var(--gold); }
-        .gallery .head h2 { color: var(--white); }
+        .gallery {
+            background: var(--black);
+            padding: 50px 0 55px;
+            color: var(--white);
+        }
+
+        .gallery .head p {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .gallery .head .kicker {
+            color: var(--gold);
+        }
+
+        .gallery .head h2 {
+            color: var(--white);
+        }
 
         .strip {
             display: flex;
@@ -517,8 +1185,18 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .pane { flex: 0 0 190px; height: 260px; border-radius: 4px; overflow: hidden; }
-        .pane img { width: 100%; height: 220px; object-fit: cover; }
+        .pane {
+            flex: 0 0 190px;
+            height: 260px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .pane img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
 
         .pane span {
             font-family: var(--serif);
@@ -530,7 +1208,10 @@
         }
 
         /* MAP */
-        .map-section { padding: 45px 0; background: var(--off-white); }
+        .map-section {
+            padding: 45px 0;
+            background: var(--off-white);
+        }
 
         .map-frame {
             border-radius: 10px;
@@ -540,12 +1221,24 @@
             height: 320px;
         }
 
-        .map-frame iframe { width: 100%; height: 100%; border: 0; }
+        .map-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
         /* FOOTER */
-        footer { background: var(--black); color: var(--white); padding: 45px 0 20px; }
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 45px 0 20px;
+        }
 
-        .foot-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 28px; }
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr 1fr;
+            gap: 28px;
+        }
 
         .foot-grid h3 {
             font-size: 14px;
@@ -564,7 +1257,16 @@
             list-style: none;
         }
 
-        .foot-grid .brand { color: var(--white); margin-bottom: 10px; }
+        .foot-grid .brand {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .foot-grid .brand img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
 
         .bottom-bar {
             margin-top: 36px;
@@ -577,7 +1279,9 @@
 
         /* ========== MOBILE ========== */
         @media (max-width: 800px) {
-            .wrap { padding: 0 16px; }
+            .wrap {
+                padding: 0 16px;
+            }
 
             nav.links {
                 position: fixed;
@@ -596,29 +1300,89 @@
                 border-left: 1px solid var(--line);
             }
 
-            nav.links.open { right: 0; }
-            nav.links a { font-size: 15px; padding: 4px 0; }
-            .menu-btn { display: block; }
+            nav.links.open {
+                right: 0;
+            }
 
-            .hero { padding: 36px 0 40px; }
-            .hero .wrap { grid-template-columns: 1fr; gap: 24px; }
-            .hero h1 { max-width: none; }
-            .hero-visual { max-width: 100%; margin: -12px auto 0; transform: translateY(-8px); }
-            
+            nav.links a {
+                font-size: 15px;
+                padding: 4px 0;
+            }
 
-            .about { padding: 36px 0; }
-            .about .wrap { grid-template-columns: 1fr; gap: 20px; text-align: center; }
-            .about-visual { order: -1; }
-            .about-visual svg { max-width: 180px; }
-            .about-copy .head { margin-left: auto; margin-right: auto; margin-bottom: 14px; }
-            .about-copy p { margin-bottom: 10px; }
+            .menu-btn {
+                display: block;
+            }
 
-            .special { padding: 36px 0; }
-            .special-row { grid-template-columns: 40px 1fr; gap: 12px; padding: 14px 0; }
-            .special-row .tag { grid-column: 2; margin-top: 2px; }
+            .hero {
+                padding: 36px 0 40px;
+            }
 
-            .menu { padding: 40px 0; }
-            .vine::before { left: 6px; }
+            .hero .wrap {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .hero h1 {
+                max-width: none;
+            }
+
+            .hero-visual {
+                max-width: 100%;
+                margin: -12px auto 0;
+                transform: translateY(-8px);
+            }
+
+
+            .about {
+                padding: 36px 0;
+            }
+
+            .about .wrap {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .about-visual {
+                order: -1;
+            }
+
+            .about-visual svg {
+                max-width: 180px;
+            }
+
+            .about-copy .head {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 14px;
+            }
+
+            .about-copy p {
+                margin-bottom: 10px;
+            }
+
+            .special {
+                padding: 36px 0;
+            }
+
+            .special-row {
+                grid-template-columns: 40px 1fr;
+                gap: 12px;
+                padding: 14px 0;
+            }
+
+            .special-row .tag {
+                grid-column: 2;
+                margin-top: 2px;
+            }
+
+            .menu {
+                padding: 40px 0;
+            }
+
+            .vine::before {
+                left: 6px;
+            }
 
             .branch,
             .branch:nth-child(even) {
@@ -627,11 +1391,19 @@
             }
 
             .branch:nth-child(even) .cat-label,
-            .branch:nth-child(even) .cat-items { order: initial; text-align: left; }
+            .branch:nth-child(even) .cat-items {
+                order: initial;
+                text-align: left;
+            }
 
-            .branch:nth-child(even) .dish { flex-direction: row; }
+            .branch:nth-child(even) .dish {
+                flex-direction: row;
+            }
 
-            .cat-label { position: relative; margin-bottom: 16px; }
+            .cat-label {
+                position: relative;
+                margin-bottom: 16px;
+            }
 
             .cat-label::before {
                 content: "";
@@ -644,42 +1416,124 @@
                 background: var(--gold);
             }
 
-            .cat-label .num { margin-bottom: 6px; }
-            .cat-label h3 { font-size: 18px; }
-            .cat-items { gap: 10px; padding-top: 2px; }
-            .menu-note { margin-top: 28px; }
+            .cat-label .num {
+                margin-bottom: 6px;
+            }
 
-            .collage { padding: 32px 0; }
-            .collage-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 120px; gap: 20px; }
+            .cat-label h3 {
+                font-size: 18px;
+            }
 
-            .tile.a, .tile.b, .tile.c, .tile.d, .tile.e, .tile.f, .tile.g {
+            .cat-items {
+                gap: 10px;
+                padding-top: 2px;
+            }
+
+            .menu-note {
+                margin-top: 28px;
+            }
+
+            .collage {
+                padding: 32px 0;
+            }
+
+            .collage-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 120px;
+                gap: 20px;
+            }
+
+            .tile.a,
+            .tile.b,
+            .tile.c,
+            .tile.d,
+            .tile.e,
+            .tile.f,
+            .tile.g {
                 grid-column: span 1;
                 grid-row: span 3;
             }
 
-            .tile.a, .tile.f { grid-row: span 2; }
+            .tile.a,
+            .tile.f {
+                grid-row: span 2;
+            }
 
-            .gallery { padding: 36px 0 40px; }
-            .pane { flex: 0 0 155px; height: 230px; }
-            .pane img { height: 190px; }
+            .gallery {
+                padding: 36px 0 40px;
+            }
 
-            .map-section { padding: 36px 0; }
-            .map-frame { height: 250px; }
+            .pane {
+                flex: 0 0 155px;
+                height: 230px;
+            }
 
-            footer { padding: 36px 0 16px; }
-            .foot-grid { grid-template-columns: 1fr 1fr; gap: 22px 16px; }
-            .bottom-bar { margin-top: 28px; padding-top: 14px; }
-            .head { margin-bottom: 20px; }
+            .pane img {
+                height: 190px;
+            }
+
+            .map-section {
+                padding: 36px 0;
+            }
+
+            .map-frame {
+                height: 250px;
+            }
+
+            footer {
+                padding: 36px 0 16px;
+            }
+
+            .foot-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 22px 16px;
+            }
+
+            .bottom-bar {
+                margin-top: 28px;
+                padding-top: 14px;
+            }
+
+            .head {
+                margin-bottom: 20px;
+            }
         }
 
         @media (max-width: 480px) {
-            .wrap { padding: 0 14px; }
-            .nav { padding: 10px 14px; }
-            .brand { font-size: 22px; }
+            .wrap {
+                padding: 0 14px;
+            }
 
-            .hero { padding: 28px 0 32px; }
-            .hero h1 { font-size: 28px; }
-            .hero p.lede { font-size: 14px; margin-top: 12px; }
+            .nav {
+                padding: 10px 14px;
+            }
+
+            .brand {
+                font-size: 22px;
+            }
+
+            .brand img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .sign-leaf {
+                width: 72px;
+                height: 72px;
+            }
+
+            .hero {
+                padding: 28px 0 32px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p.lede {
+                font-size: 14px;
+                margin-top: 12px;
+            }
 
             .hero .cta {
                 width: 100%;
@@ -688,151 +1542,541 @@
                 margin-top: 18px;
             }
 
-            
 
-            .head { margin-bottom: 16px; }
-            .head h2 { font-size: 22px; }
-            .head p { margin-top: 8px; font-size: 14px; }
 
-            .about, .special, .menu, .gallery, .map-section {
+            .head {
+                margin-bottom: 16px;
+            }
+
+            .head h2 {
+                font-size: 22px;
+            }
+
+            .head p {
+                margin-top: 8px;
+                font-size: 14px;
+            }
+
+            .about,
+            .special,
+            .menu,
+            .gallery,
+            .map-section {
                 padding-top: 28px;
                 padding-bottom: 28px;
             }
 
-            .about-visual svg { max-width: 140px; }
-            .about-copy p { font-size: 14.5px; margin-bottom: 8px; }
+            .about-visual svg {
+                max-width: 140px;
+            }
 
-            .special-row { grid-template-columns: 1fr; gap: 4px; padding: 12px 0; }
-            .special-row .glyph { display: none; }
-            .special-row h3 { font-size: 16px; }
-            .special-row .tag { margin-top: 0; }
+            .about-copy p {
+                font-size: 14.5px;
+                margin-bottom: 8px;
+            }
+
+            .special-row {
+                grid-template-columns: 1fr;
+                gap: 4px;
+                padding: 12px 0;
+            }
+
+            .special-row .glyph {
+                display: none;
+            }
+
+            .special-row h3 {
+                font-size: 16px;
+            }
+
+            .special-row .tag {
+                margin-top: 0;
+            }
 
             .branch,
-            .branch:nth-child(even) { padding: 24px 6px 24px 32px; }
+            .branch:nth-child(even) {
+                padding: 24px 6px 24px 32px;
+            }
 
-            .cat-label { margin-bottom: 14px; }
-            .cat-label h3 { font-size: 17px; }
-            .cat-items { gap: 9px; }
-            .dish h4 { font-size: 14px; }
+            .cat-label {
+                margin-bottom: 14px;
+            }
 
-            .collage { padding: 24px 0; }
-            .collage-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 100px; gap: 10px; }
+            .cat-label h3 {
+                font-size: 17px;
+            }
 
-            .pane { flex: 0 0 140px; height: 200px; }
-            .pane img { height: 165px; }
+            .cat-items {
+                gap: 9px;
+            }
 
-            .map-frame { height: 220px; }
+            .dish h4 {
+                font-size: 14px;
+            }
 
-            footer { padding: 28px 0 14px; }
-            .foot-grid { grid-template-columns: 1fr; gap: 20px; }
-            .bottom-bar { margin-top: 22px; }
+            .collage {
+                padding: 24px 0;
+            }
+
+            .collage-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: 100px;
+                gap: 10px;
+            }
+
+            .pane {
+                flex: 0 0 140px;
+                height: 200px;
+            }
+
+            .pane img {
+                height: 165px;
+            }
+
+            .map-frame {
+                height: 220px;
+            }
+
+            footer {
+                padding: 28px 0 14px;
+            }
+
+            .foot-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .bottom-bar {
+                margin-top: 22px;
+            }
         }
-    
+
         /* ===== EXTRA MOTION + PUNCH LINES ===== */
-        .progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transform-origin: left; z-index: 90; pointer-events: none; }
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            z-index: 90;
+            pointer-events: none;
+        }
 
         /* hero punch line */
-        .hero .punch { margin-top: 16px; display: flex; align-items: baseline; gap: 8px; font-family: var(--serif); font-style: italic; color: var(--green); font-size: 17px; opacity: 0; animation: fadeUp .8s cubic-bezier(.3, .6, .3, 1) .55s forwards; }
-        .punch-label { font-family: var(--sans); font-style: normal; font-size: 12px; color: var(--muted); }
-        .punch-rot { display: inline-block; transition: opacity .35s ease, transform .35s ease; }
-        .punch-rot.out { opacity: 0; transform: translateY(6px); }
+        .hero .punch {
+            margin-top: 16px;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            font-family: var(--serif);
+            font-style: italic;
+            color: var(--green);
+            font-size: 17px;
+            opacity: 0;
+            animation: fadeUp .8s cubic-bezier(.3, .6, .3, 1) .55s forwards;
+        }
+
+        .punch-label {
+            font-family: var(--sans);
+            font-style: normal;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .punch-rot {
+            display: inline-block;
+            transition: opacity .35s ease, transform .35s ease;
+        }
+
+        .punch-rot.out {
+            opacity: 0;
+            transform: translateY(6px);
+        }
 
         /* underline draws under the accent */
-        .hero .accent { background: linear-gradient(var(--gold), var(--gold)) no-repeat 0 94% / 0% 1.5px; animation: underline 1s ease 1.2s forwards; }
-        @keyframes underline { to { background-size: 100% 1.5px; } }
+        .hero .accent {
+            background: linear-gradient(var(--gold), var(--gold)) no-repeat 0 94% / 0% 1.5px;
+            animation: underline 1s ease 1.2s forwards;
+        }
+
+        @keyframes underline {
+            to {
+                background-size: 100% 1.5px;
+            }
+        }
 
         /* CTA shine */
-        .hero .cta { position: relative; overflow: hidden; }
-        .hero .cta::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: 0; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .35), transparent); transform: translateX(-140%) skewX(-18deg); }
-        .hero .cta:hover::after { transform: translateX(340%) skewX(-18deg); transition: transform .8s ease; }
+        .hero .cta {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero .cta::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40%;
+            left: 0;
+            background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .35), transparent);
+            transform: translateX(-140%) skewX(-18deg);
+        }
+
+        .hero .cta:hover::after {
+            transform: translateX(340%) skewX(-18deg);
+            transition: transform .8s ease;
+        }
 
         /* brand leaf */
-        .brand img { transition: transform .35s cubic-bezier(.3, .8, .3, 1.4); }
-        .brand:hover img { transform: rotate(-14deg) scale(1.15); }
+        .brand img {
+            transition: transform .35s cubic-bezier(.3, .8, .3, 1.4);
+        }
+
+        .brand:hover img {
+            transform: rotate(-14deg) scale(1.15);
+        }
 
         /* call button pulse + wiggle */
-        .call-fab::before { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 2px solid var(--gold); animation: fabPulse 2.4s ease-out infinite; pointer-events: none; }
-        .call-fab svg { animation: wiggle 5s ease-in-out infinite; }
-        @keyframes fabPulse { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.5); opacity: 0; } }
-        @keyframes wiggle { 0%, 84%, 100% { transform: rotate(0); } 87% { transform: rotate(-16deg); } 90% { transform: rotate(14deg); } 93% { transform: rotate(-9deg); } 96% { transform: rotate(6deg); } }
+        .call-fab::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 2px solid var(--gold);
+            animation: fabPulse 2.4s ease-out infinite;
+            pointer-events: none;
+        }
+
+        .call-fab svg {
+            animation: wiggle 5s ease-in-out infinite;
+        }
+
+        @keyframes fabPulse {
+            0% {
+                transform: scale(1);
+                opacity: .8;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes wiggle {
+
+            0%,
+            84%,
+            100% {
+                transform: rotate(0);
+            }
+
+            87% {
+                transform: rotate(-16deg);
+            }
+
+            90% {
+                transform: rotate(14deg);
+            }
+
+            93% {
+                transform: rotate(-9deg);
+            }
+
+            96% {
+                transform: rotate(6deg);
+            }
+        }
 
         /* marquee */
-        .marquee { background: var(--green); color: var(--white); overflow: hidden; white-space: nowrap; padding: 12px 0; font-family: var(--serif); font-style: italic; font-size: 16px; }
-        .marquee-track { display: inline-flex; animation: marquee 34s linear infinite; will-change: transform; }
-        .marquee:hover .marquee-track { animation-play-state: paused; }
-        .marquee span { padding: 0 26px; }
-        .marquee span::after { content: "\2726"; margin-left: 52px; font-style: normal; font-size: 12px; opacity: .6; }
-        @keyframes marquee { to { transform: translateX(-50%); } }
+        .marquee {
+            background: var(--green);
+            color: var(--white);
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 12px 0;
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        .marquee-track {
+            display: inline-flex;
+            animation: marquee 34s linear infinite;
+            will-change: transform;
+        }
+
+        .marquee:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        .marquee span {
+            padding: 0 26px;
+        }
+
+        .marquee span::after {
+            content: "\2726";
+            margin-left: 52px;
+            font-style: normal;
+            font-size: 12px;
+            opacity: .6;
+        }
+
+        @keyframes marquee {
+            to {
+                transform: translateX(-50%);
+            }
+        }
 
         /* stats */
-        .stats { background: var(--off-white); padding: 34px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; text-align: center; }
-        .stat b { display: block; font-family: var(--serif); font-size: clamp(30px, 5vw, 44px); font-weight: 700; color: var(--green); line-height: 1.1; }
-        .stat span { font-size: 13px; color: var(--muted); }
+        .stats {
+            background: var(--off-white);
+            padding: 34px 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            text-align: center;
+        }
+
+        .stat b {
+            display: block;
+            font-family: var(--serif);
+            font-size: clamp(30px, 5vw, 44px);
+            font-weight: 700;
+            color: var(--green);
+            line-height: 1.1;
+        }
+
+        .stat span {
+            font-size: 13px;
+            color: var(--muted);
+        }
 
         /* thug / punch lines */
-        .head p.thug { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--green-mid); margin-top: 8px; }
-        .special .head p.thug, .gallery .head p.thug { color: var(--gold); }
-        .menu-note + .menu-note { margin-top: 8px; font-family: var(--serif); font-style: italic; color: var(--green-mid); }
+        .head p.thug {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 15px;
+            color: var(--green-mid);
+            margin-top: 8px;
+        }
+
+        .special .head p.thug,
+        .gallery .head p.thug {
+            color: var(--gold);
+        }
+
+        .menu-note+.menu-note {
+            margin-top: 8px;
+            font-family: var(--serif);
+            font-style: italic;
+            color: var(--green-mid);
+        }
 
         /* hover micro-interactions */
-        .special-row h3, .special-row .tag { transition: transform .3s ease, color .3s ease; }
-        .special-row:hover h3 { transform: translateX(8px); color: var(--gold); }
-        .special-row:hover .tag { transform: translateX(-4px); }
-        .special-row .glyph { transition: transform .5s cubic-bezier(.3, .8, .3, 1.3); }
-        .special-row:hover .glyph { transform: rotate(25deg) scale(1.12); }
+        .special-row h3,
+        .special-row .tag {
+            transition: transform .3s ease, color .3s ease;
+        }
 
-        .dish h4 { transition: color .25s ease, transform .25s ease; }
-        .dish:hover h4 { color: var(--green); transform: translateX(5px); }
-        .branch:nth-child(even) .dish:hover h4 { transform: translateX(-5px); }
+        .special-row:hover h3 {
+            transform: translateX(8px);
+            color: var(--gold);
+        }
 
-        .tile img { transition: transform .7s ease; }
-        .tile:hover img { transform: scale(1.09); }
-        .tile span { transition: transform .35s ease; }
-        .tile:hover span { transform: translateY(-4px); }
+        .special-row:hover .tag {
+            transform: translateX(-4px);
+        }
 
-        .pane { transition: transform .35s ease, box-shadow .35s ease; }
-        .pane:hover { transform: translateY(-6px); box-shadow: 0 14px 28px rgba(0, 0, 0, .35); }
-        .pane img { transition: transform .6s ease; }
-        .pane:hover img { transform: scale(1.06); }
+        .special-row .glyph {
+            transition: transform .5s cubic-bezier(.3, .8, .3, 1.3);
+        }
 
-        .menu-note a { transition: color .2s ease, border-color .2s ease; }
-        .menu-note a:hover { color: var(--forest); border-color: var(--gold); }
-        .foot-grid a { transition: color .2s ease; }
-        .foot-grid a:hover { color: var(--gold); }
+        .special-row:hover .glyph {
+            transform: rotate(25deg) scale(1.12);
+        }
+
+        .dish h4 {
+            transition: color .25s ease, transform .25s ease;
+        }
+
+        .dish:hover h4 {
+            color: var(--green);
+            transform: translateX(5px);
+        }
+
+        .branch:nth-child(even) .dish:hover h4 {
+            transform: translateX(-5px);
+        }
+
+        .tile img {
+            transition: transform .7s ease;
+        }
+
+        .tile:hover img {
+            transform: scale(1.09);
+        }
+
+        .tile span {
+            transition: transform .35s ease;
+        }
+
+        .tile:hover span {
+            transform: translateY(-4px);
+        }
+
+        .pane {
+            transition: transform .35s ease, box-shadow .35s ease;
+        }
+
+        .pane:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, .35);
+        }
+
+        .pane img {
+            transition: transform .6s ease;
+        }
+
+        .pane:hover img {
+            transform: scale(1.06);
+        }
+
+        .menu-note a {
+            transition: color .2s ease, border-color .2s ease;
+        }
+
+        .menu-note a:hover {
+            color: var(--forest);
+            border-color: var(--gold);
+        }
+
+        .foot-grid a {
+            transition: color .2s ease;
+        }
+
+        .foot-grid a:hover {
+            color: var(--gold);
+        }
 
         /* scroll reveals (only when JS is on) */
-        .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.3, .6, .3, 1); transition-delay: calc(var(--i, 0) * 90ms); }
-        .js .reveal.in { opacity: 1; transform: none; }
-        .js .dish.reveal { transform: translateX(-18px); }
-        .js .branch:nth-child(even) .dish.reveal { transform: translateX(18px); }
-        .js .dish.reveal.in { transform: none; }
-        .js .tile.reveal { transform: scale(.92); }
-        .js .tile.reveal.in { transform: none; }
+        .js .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .7s ease, transform .7s cubic-bezier(.3, .6, .3, 1);
+            transition-delay: calc(var(--i, 0) * 90ms);
+        }
+
+        .js .reveal.in {
+            opacity: 1;
+            transform: none;
+        }
+
+        .js .dish.reveal {
+            transform: translateX(-18px);
+        }
+
+        .js .branch:nth-child(even) .dish.reveal {
+            transform: translateX(18px);
+        }
+
+        .js .dish.reveal.in {
+            transform: none;
+        }
+
+        .js .tile.reveal {
+            transform: scale(.92);
+        }
+
+        .js .tile.reveal.in {
+            transform: none;
+        }
 
         /* the vine grows down as you reach the menu */
-        .js .vine::before { transform: translateX(-1px) scaleY(0); transform-origin: top; transition: transform 1.8s ease; }
-        .js .vine.in::before { transform: translateX(-1px) scaleY(1); }
+        .js .vine::before {
+            transform: translateX(-1px) scaleY(0);
+            transform-origin: top;
+            transition: transform 1.8s ease;
+        }
+
+        .js .vine.in::before {
+            transform: translateX(-1px) scaleY(1);
+        }
 
         @media (max-width: 800px) {
-            .stats { padding: 28px 0; }
-            .stats-grid { grid-template-columns: 1fr 1fr; gap: 22px 14px; }
-            .marquee { font-size: 14.5px; padding: 10px 0; }
-            .js .branch:nth-child(even) .dish.reveal { transform: translateX(-18px); }
-            .js .branch:nth-child(even) .dish.reveal.in { transform: none; }
-            .branch:nth-child(even) .dish:hover h4 { transform: translateX(5px); }
+            .stats {
+                padding: 28px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 22px 14px;
+            }
+
+            .marquee {
+                font-size: 14.5px;
+                padding: 10px 0;
+            }
+
+            .js .branch:nth-child(even) .dish.reveal {
+                transform: translateX(-18px);
+            }
+
+            .js .branch:nth-child(even) .dish.reveal.in {
+                transform: none;
+            }
+
+            .branch:nth-child(even) .dish:hover h4 {
+                transform: translateX(5px);
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .js .reveal, .js .dish.reveal, .js .tile.reveal, .js .branch:nth-child(even) .dish.reveal { opacity: 1; transform: none; transition: none; }
-            .js .vine::before { transform: translateX(-1px) scaleY(1); transition: none; }
-            .marquee-track, .call-fab::before, .call-fab svg { animation: none; }
-            .hero .punch { animation: none; opacity: 1; }
-            .hero .accent { animation: none; background-size: 100% 1.5px; }
-            .progress { display: none; }
+
+            .js .reveal,
+            .js .dish.reveal,
+            .js .tile.reveal,
+            .js .branch:nth-child(even) .dish.reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            .js .vine::before {
+                transform: translateX(-1px) scaleY(1);
+                transition: none;
+            }
+
+            .marquee-track,
+            .call-fab::before,
+            .call-fab svg {
+                animation: none;
+            }
+
+            .hero .punch {
+                animation: none;
+                opacity: 1;
+            }
+
+            .hero .accent {
+                animation: none;
+                background-size: 100% 1.5px;
+            }
+
+            .progress {
+                display: none;
+            }
         }
     </style>
-<script>if ("IntersectionObserver" in window) document.documentElement.classList.add("js");</script>
+    <script>if ("IntersectionObserver" in window) document.documentElement.classList.add("js");</script>
 </head>
 
 <body>
@@ -841,8 +2085,11 @@
 
     <div class="intro" id="intro" aria-hidden="true">
         <div class="intro-inner">
-            <img class="intro-leaf" src="images/glogo.png" alt="Green Leaf logo" width="88" height="88">
-            <div class="intro-name"><span style="--k:0">G</span><span style="--k:1">r</span><span style="--k:2">e</span><span style="--k:3">e</span><span style="--k:4">n</span><span style="--k:5">&nbsp;</span><span style="--k:6">L</span><span style="--k:7">e</span><span style="--k:8">a</span><span style="--k:9">f</span></div>
+            <img class="intro-leaf" src="images/logoo.png" alt="Green Leaf logo" width="150" height="150">
+            <div class="intro-name"><span style="--k:0">G</span><span style="--k:1">r</span><span
+                    style="--k:2">e</span><span style="--k:3">e</span><span style="--k:4">n</span><span
+                    style="--k:5">&nbsp;</span><span style="--k:6">L</span><span style="--k:7">e</span><span
+                    style="--k:8">a</span><span style="--k:9">f</span></div>
             <div class="intro-tag">Good Food. Green Mood.</div>
             <div class="intro-bar"></div>
         </div>
@@ -852,7 +2099,7 @@
     <header>
         <div class="nav">
             <a class="brand" href="#top">
-                <img src="images/glogo.png" alt="" width="24" height="24">
+                <img src="images/logoo.png" alt="" width="46" height="46">
                 Green Leaf
             </a>
             <button class="menu-btn" aria-label="Toggle menu"
@@ -882,128 +2129,135 @@
     <section class="hero" id="top">
         <div class="hero-leaf-field" aria-hidden="true">
             <div class="leaf l1"><svg viewBox="0 0 80 100" aria-hidden="true">
-                        <path class="stem" d="M40 98 C40 72 40 55 40 40"/>
-                        <path class="blade" d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z"/>
-                        <!-- main midrib -->
-                        <path class="vein" d="M40 20 C40 38 40 55 40 78"/>
-                        <!-- primary side veins -->
-                        <path class="vein" d="M40 30 C30 34 24 40 22 48"/>
-                        <path class="vein" d="M40 30 C50 34 56 40 58 48"/>
-                        <path class="vein" d="M40 42 C31 46 25 52 23 60"/>
-                        <path class="vein" d="M40 42 C49 46 55 52 57 60"/>
-                        <path class="vein" d="M40 54 C33 57 28 62 26 68"/>
-                        <path class="vein" d="M40 54 C47 57 52 62 54 68"/>
-                        <!-- secondary soft veins -->
-                        <path class="vein-soft" d="M40 26 C34 28 30 32 28 36"/>
-                        <path class="vein-soft" d="M40 26 C46 28 50 32 52 36"/>
-                        <path class="vein-soft" d="M40 36 C33 39 28 44 26 50"/>
-                        <path class="vein-soft" d="M40 36 C47 39 52 44 54 50"/>
-                        <path class="vein-soft" d="M40 48 C34 51 30 55 28 60"/>
-                        <path class="vein-soft" d="M40 48 C46 51 50 55 52 60"/>
-                        <path class="vein-soft" d="M40 60 C35 62 32 65 30 69"/>
-                        <path class="vein-soft" d="M40 60 C45 62 48 65 50 69"/>
-                    </svg></div>
+                    <path class="stem" d="M40 98 C40 72 40 55 40 40" />
+                    <path class="blade"
+                        d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z" />
+                    <!-- main midrib -->
+                    <path class="vein" d="M40 20 C40 38 40 55 40 78" />
+                    <!-- primary side veins -->
+                    <path class="vein" d="M40 30 C30 34 24 40 22 48" />
+                    <path class="vein" d="M40 30 C50 34 56 40 58 48" />
+                    <path class="vein" d="M40 42 C31 46 25 52 23 60" />
+                    <path class="vein" d="M40 42 C49 46 55 52 57 60" />
+                    <path class="vein" d="M40 54 C33 57 28 62 26 68" />
+                    <path class="vein" d="M40 54 C47 57 52 62 54 68" />
+                    <!-- secondary soft veins -->
+                    <path class="vein-soft" d="M40 26 C34 28 30 32 28 36" />
+                    <path class="vein-soft" d="M40 26 C46 28 50 32 52 36" />
+                    <path class="vein-soft" d="M40 36 C33 39 28 44 26 50" />
+                    <path class="vein-soft" d="M40 36 C47 39 52 44 54 50" />
+                    <path class="vein-soft" d="M40 48 C34 51 30 55 28 60" />
+                    <path class="vein-soft" d="M40 48 C46 51 50 55 52 60" />
+                    <path class="vein-soft" d="M40 60 C35 62 32 65 30 69" />
+                    <path class="vein-soft" d="M40 60 C45 62 48 65 50 69" />
+                </svg></div>
             <div class="leaf l2"><svg viewBox="0 0 80 100" aria-hidden="true">
-                        <path class="stem" d="M40 98 C40 72 40 55 40 40"/>
-                        <path class="blade" d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z"/>
-                        <path class="vein" d="M40 20 C40 38 40 55 40 78"/>
-                        <path class="vein" d="M40 30 C30 34 24 40 22 48"/>
-                        <path class="vein" d="M40 30 C50 34 56 40 58 48"/>
-                        <path class="vein" d="M40 42 C31 46 25 52 23 60"/>
-                        <path class="vein" d="M40 42 C49 46 55 52 57 60"/>
-                        <path class="vein" d="M40 54 C33 57 28 62 26 68"/>
-                        <path class="vein" d="M40 54 C47 57 52 62 54 68"/>
-                        <path class="vein-soft" d="M40 26 C34 28 30 32 28 36"/>
-                        <path class="vein-soft" d="M40 26 C46 28 50 32 52 36"/>
-                        <path class="vein-soft" d="M40 36 C33 39 28 44 26 50"/>
-                        <path class="vein-soft" d="M40 36 C47 39 52 44 54 50"/>
-                        <path class="vein-soft" d="M40 48 C34 51 30 55 28 60"/>
-                        <path class="vein-soft" d="M40 48 C46 51 50 55 52 60"/>
-                        <path class="vein-soft" d="M40 60 C35 62 32 65 30 69"/>
-                        <path class="vein-soft" d="M40 60 C45 62 48 65 50 69"/>
-                    </svg></div>
+                    <path class="stem" d="M40 98 C40 72 40 55 40 40" />
+                    <path class="blade"
+                        d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z" />
+                    <path class="vein" d="M40 20 C40 38 40 55 40 78" />
+                    <path class="vein" d="M40 30 C30 34 24 40 22 48" />
+                    <path class="vein" d="M40 30 C50 34 56 40 58 48" />
+                    <path class="vein" d="M40 42 C31 46 25 52 23 60" />
+                    <path class="vein" d="M40 42 C49 46 55 52 57 60" />
+                    <path class="vein" d="M40 54 C33 57 28 62 26 68" />
+                    <path class="vein" d="M40 54 C47 57 52 62 54 68" />
+                    <path class="vein-soft" d="M40 26 C34 28 30 32 28 36" />
+                    <path class="vein-soft" d="M40 26 C46 28 50 32 52 36" />
+                    <path class="vein-soft" d="M40 36 C33 39 28 44 26 50" />
+                    <path class="vein-soft" d="M40 36 C47 39 52 44 54 50" />
+                    <path class="vein-soft" d="M40 48 C34 51 30 55 28 60" />
+                    <path class="vein-soft" d="M40 48 C46 51 50 55 52 60" />
+                    <path class="vein-soft" d="M40 60 C35 62 32 65 30 69" />
+                    <path class="vein-soft" d="M40 60 C45 62 48 65 50 69" />
+                </svg></div>
             <div class="leaf l3"><svg viewBox="0 0 80 100" aria-hidden="true">
-                        <path class="stem" d="M40 98 C40 72 40 55 40 40"/>
-                        <path class="blade" d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z"/>
-                        <path class="vein" d="M40 20 C40 38 40 55 40 78"/>
-                        <path class="vein" d="M40 30 C30 34 24 40 22 48"/>
-                        <path class="vein" d="M40 30 C50 34 56 40 58 48"/>
-                        <path class="vein" d="M40 42 C31 46 25 52 23 60"/>
-                        <path class="vein" d="M40 42 C49 46 55 52 57 60"/>
-                        <path class="vein" d="M40 54 C33 57 28 62 26 68"/>
-                        <path class="vein" d="M40 54 C47 57 52 62 54 68"/>
-                        <path class="vein-soft" d="M40 26 C34 28 30 32 28 36"/>
-                        <path class="vein-soft" d="M40 26 C46 28 50 32 52 36"/>
-                        <path class="vein-soft" d="M40 36 C33 39 28 44 26 50"/>
-                        <path class="vein-soft" d="M40 36 C47 39 52 44 54 50"/>
-                        <path class="vein-soft" d="M40 48 C34 51 30 55 28 60"/>
-                        <path class="vein-soft" d="M40 48 C46 51 50 55 52 60"/>
-                        <path class="vein-soft" d="M40 60 C35 62 32 65 30 69"/>
-                        <path class="vein-soft" d="M40 60 C45 62 48 65 50 69"/>
-                    </svg></div>
+                    <path class="stem" d="M40 98 C40 72 40 55 40 40" />
+                    <path class="blade"
+                        d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z" />
+                    <path class="vein" d="M40 20 C40 38 40 55 40 78" />
+                    <path class="vein" d="M40 30 C30 34 24 40 22 48" />
+                    <path class="vein" d="M40 30 C50 34 56 40 58 48" />
+                    <path class="vein" d="M40 42 C31 46 25 52 23 60" />
+                    <path class="vein" d="M40 42 C49 46 55 52 57 60" />
+                    <path class="vein" d="M40 54 C33 57 28 62 26 68" />
+                    <path class="vein" d="M40 54 C47 57 52 62 54 68" />
+                    <path class="vein-soft" d="M40 26 C34 28 30 32 28 36" />
+                    <path class="vein-soft" d="M40 26 C46 28 50 32 52 36" />
+                    <path class="vein-soft" d="M40 36 C33 39 28 44 26 50" />
+                    <path class="vein-soft" d="M40 36 C47 39 52 44 54 50" />
+                    <path class="vein-soft" d="M40 48 C34 51 30 55 28 60" />
+                    <path class="vein-soft" d="M40 48 C46 51 50 55 52 60" />
+                    <path class="vein-soft" d="M40 60 C35 62 32 65 30 69" />
+                    <path class="vein-soft" d="M40 60 C45 62 48 65 50 69" />
+                </svg></div>
             <div class="leaf l4"><svg viewBox="0 0 80 100" aria-hidden="true">
-                        <path class="stem" d="M40 98 C40 72 40 55 40 40"/>
-                        <path class="blade" d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z"/>
-                        <path class="vein" d="M40 20 C40 38 40 55 40 78"/>
-                        <path class="vein" d="M40 30 C30 34 24 40 22 48"/>
-                        <path class="vein" d="M40 30 C50 34 56 40 58 48"/>
-                        <path class="vein" d="M40 42 C31 46 25 52 23 60"/>
-                        <path class="vein" d="M40 42 C49 46 55 52 57 60"/>
-                        <path class="vein" d="M40 54 C33 57 28 62 26 68"/>
-                        <path class="vein" d="M40 54 C47 57 52 62 54 68"/>
-                        <path class="vein-soft" d="M40 26 C34 28 30 32 28 36"/>
-                        <path class="vein-soft" d="M40 26 C46 28 50 32 52 36"/>
-                        <path class="vein-soft" d="M40 36 C33 39 28 44 26 50"/>
-                        <path class="vein-soft" d="M40 36 C47 39 52 44 54 50"/>
-                        <path class="vein-soft" d="M40 48 C34 51 30 55 28 60"/>
-                        <path class="vein-soft" d="M40 48 C46 51 50 55 52 60"/>
-                        <path class="vein-soft" d="M40 60 C35 62 32 65 30 69"/>
-                        <path class="vein-soft" d="M40 60 C45 62 48 65 50 69"/>
-                    </svg></div>
+                    <path class="stem" d="M40 98 C40 72 40 55 40 40" />
+                    <path class="blade"
+                        d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z" />
+                    <path class="vein" d="M40 20 C40 38 40 55 40 78" />
+                    <path class="vein" d="M40 30 C30 34 24 40 22 48" />
+                    <path class="vein" d="M40 30 C50 34 56 40 58 48" />
+                    <path class="vein" d="M40 42 C31 46 25 52 23 60" />
+                    <path class="vein" d="M40 42 C49 46 55 52 57 60" />
+                    <path class="vein" d="M40 54 C33 57 28 62 26 68" />
+                    <path class="vein" d="M40 54 C47 57 52 62 54 68" />
+                    <path class="vein-soft" d="M40 26 C34 28 30 32 28 36" />
+                    <path class="vein-soft" d="M40 26 C46 28 50 32 52 36" />
+                    <path class="vein-soft" d="M40 36 C33 39 28 44 26 50" />
+                    <path class="vein-soft" d="M40 36 C47 39 52 44 54 50" />
+                    <path class="vein-soft" d="M40 48 C34 51 30 55 28 60" />
+                    <path class="vein-soft" d="M40 48 C46 51 50 55 52 60" />
+                    <path class="vein-soft" d="M40 60 C35 62 32 65 30 69" />
+                    <path class="vein-soft" d="M40 60 C45 62 48 65 50 69" />
+                </svg></div>
             <div class="leaf l5"><svg viewBox="0 0 80 100" aria-hidden="true">
-                        <path class="stem" d="M40 98 C40 72 40 55 40 40"/>
-                        <path class="blade" d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z"/>
-                        <path class="vein" d="M40 20 C40 38 40 55 40 78"/>
-                        <path class="vein" d="M40 30 C30 34 24 40 22 48"/>
-                        <path class="vein" d="M40 30 C50 34 56 40 58 48"/>
-                        <path class="vein" d="M40 42 C31 46 25 52 23 60"/>
-                        <path class="vein" d="M40 42 C49 46 55 52 57 60"/>
-                        <path class="vein" d="M40 54 C33 57 28 62 26 68"/>
-                        <path class="vein" d="M40 54 C47 57 52 62 54 68"/>
-                        <path class="vein-soft" d="M40 26 C34 28 30 32 28 36"/>
-                        <path class="vein-soft" d="M40 26 C46 28 50 32 52 36"/>
-                        <path class="vein-soft" d="M40 36 C33 39 28 44 26 50"/>
-                        <path class="vein-soft" d="M40 36 C47 39 52 44 54 50"/>
-                        <path class="vein-soft" d="M40 48 C34 51 30 55 28 60"/>
-                        <path class="vein-soft" d="M40 48 C46 51 50 55 52 60"/>
-                        <path class="vein-soft" d="M40 60 C35 62 32 65 30 69"/>
-                        <path class="vein-soft" d="M40 60 C45 62 48 65 50 69"/>
-                    </svg></div>
+                    <path class="stem" d="M40 98 C40 72 40 55 40 40" />
+                    <path class="blade"
+                        d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z" />
+                    <path class="vein" d="M40 20 C40 38 40 55 40 78" />
+                    <path class="vein" d="M40 30 C30 34 24 40 22 48" />
+                    <path class="vein" d="M40 30 C50 34 56 40 58 48" />
+                    <path class="vein" d="M40 42 C31 46 25 52 23 60" />
+                    <path class="vein" d="M40 42 C49 46 55 52 57 60" />
+                    <path class="vein" d="M40 54 C33 57 28 62 26 68" />
+                    <path class="vein" d="M40 54 C47 57 52 62 54 68" />
+                    <path class="vein-soft" d="M40 26 C34 28 30 32 28 36" />
+                    <path class="vein-soft" d="M40 26 C46 28 50 32 52 36" />
+                    <path class="vein-soft" d="M40 36 C33 39 28 44 26 50" />
+                    <path class="vein-soft" d="M40 36 C47 39 52 44 54 50" />
+                    <path class="vein-soft" d="M40 48 C34 51 30 55 28 60" />
+                    <path class="vein-soft" d="M40 48 C46 51 50 55 52 60" />
+                    <path class="vein-soft" d="M40 60 C35 62 32 65 30 69" />
+                    <path class="vein-soft" d="M40 60 C45 62 48 65 50 69" />
+                </svg></div>
             <div class="leaf l6"><svg viewBox="0 0 80 100" aria-hidden="true">
-                        <path class="stem" d="M40 98 C40 72 40 55 40 40"/>
-                        <path class="blade" d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z"/>
-                        <path class="vein" d="M40 20 C40 38 40 55 40 78"/>
-                        <path class="vein" d="M40 30 C30 34 24 40 22 48"/>
-                        <path class="vein" d="M40 30 C50 34 56 40 58 48"/>
-                        <path class="vein" d="M40 42 C31 46 25 52 23 60"/>
-                        <path class="vein" d="M40 42 C49 46 55 52 57 60"/>
-                        <path class="vein" d="M40 54 C33 57 28 62 26 68"/>
-                        <path class="vein" d="M40 54 C47 57 52 62 54 68"/>
-                        <path class="vein-soft" d="M40 26 C34 28 30 32 28 36"/>
-                        <path class="vein-soft" d="M40 26 C46 28 50 32 52 36"/>
-                        <path class="vein-soft" d="M40 36 C33 39 28 44 26 50"/>
-                        <path class="vein-soft" d="M40 36 C47 39 52 44 54 50"/>
-                        <path class="vein-soft" d="M40 48 C34 51 30 55 28 60"/>
-                        <path class="vein-soft" d="M40 48 C46 51 50 55 52 60"/>
-                        <path class="vein-soft" d="M40 60 C35 62 32 65 30 69"/>
-                        <path class="vein-soft" d="M40 60 C45 62 48 65 50 69"/>
-                    </svg></div>
+                    <path class="stem" d="M40 98 C40 72 40 55 40 40" />
+                    <path class="blade"
+                        d="M40 12 C22 22 14 40 20 58 C24 70 32 78 40 82 C48 78 56 70 60 58 C66 40 58 22 40 12 Z" />
+                    <path class="vein" d="M40 20 C40 38 40 55 40 78" />
+                    <path class="vein" d="M40 30 C30 34 24 40 22 48" />
+                    <path class="vein" d="M40 30 C50 34 56 40 58 48" />
+                    <path class="vein" d="M40 42 C31 46 25 52 23 60" />
+                    <path class="vein" d="M40 42 C49 46 55 52 57 60" />
+                    <path class="vein" d="M40 54 C33 57 28 62 26 68" />
+                    <path class="vein" d="M40 54 C47 57 52 62 54 68" />
+                    <path class="vein-soft" d="M40 26 C34 28 30 32 28 36" />
+                    <path class="vein-soft" d="M40 26 C46 28 50 32 52 36" />
+                    <path class="vein-soft" d="M40 36 C33 39 28 44 26 50" />
+                    <path class="vein-soft" d="M40 36 C47 39 52 44 54 50" />
+                    <path class="vein-soft" d="M40 48 C34 51 30 55 28 60" />
+                    <path class="vein-soft" d="M40 48 C46 51 50 55 52 60" />
+                    <path class="vein-soft" d="M40 60 C35 62 32 65 30 69" />
+                    <path class="vein-soft" d="M40 60 C45 62 48 65 50 69" />
+                </svg></div>
         </div>
         <div class="wrap">
             <div class="hero-copy">
                 <div class="eyebrow-line"></div>
                 <h1>Dine slow, <span class="accent">breathe easy</span></h1>
-                <p class="lede">Continental, Oriental, Indian, Tandoori and South Indian plates, plus mocktails, tea, coffee and fresh juice — 300+ dishes under one leafy roof, in a room built for lingering.</p>
+                <p class="lede">Continental, Oriental, Indian, Tandoori and South Indian plates, plus mocktails, tea,
+                    coffee and fresh juice — 300+ dishes under one leafy roof, in a room built for lingering.</p>
                 <p class="punch"><span class="punch-rot">Good Food. Green Mood.</span></p>
                 <a class="cta" href="menu.html">See the menu</a>
             </div>
@@ -1011,7 +2265,7 @@
             <div class="hero-visual" aria-hidden="true">
                 <div class="sign">
                     <div class="sign-board">
-                        <img class="sign-leaf" src="images/glogo.png" alt="" width="42" height="42">
+                        <img class="sign-leaf" src="images/logoo.png" alt="" width="84" height="84">
                         <div class="sign-name">Green Leaf</div>
                         <div class="sign-sub">Multicuisine Restaurant</div>
                     </div>
@@ -1032,7 +2286,15 @@
         </div>
     </section>
 
-    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Good Food. Green Mood.</span><span>Taste the Leaf. Love the Feast.</span><span>Fresh Vibes. Bold Bites.</span><span>Where Taste Takes Root.</span><span>Green Outside. Great Taste Inside.</span><span>Leaf the Ordinary. Taste the Extraordinary.</span><span>Taste the Green Leaf.</span><span>Good Food. Green Mood.</span><span>Taste the Leaf. Love the Feast.</span><span>Fresh Vibes. Bold Bites.</span><span>Where Taste Takes Root.</span><span>Green Outside. Great Taste Inside.</span><span>Leaf the Ordinary. Taste the Extraordinary.</span><span>Taste the Green Leaf.</span></div></div>
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track"><span>Good Food. Green Mood.</span><span>Taste the Leaf. Love the
+                Feast.</span><span>Fresh Vibes. Bold Bites.</span><span>Where Taste Takes Root.</span><span>Green
+                Outside. Great Taste Inside.</span><span>Leaf the Ordinary. Taste the Extraordinary.</span><span>Taste
+                the Green Leaf.</span><span>Good Food. Green Mood.</span><span>Taste the Leaf. Love the
+                Feast.</span><span>Fresh Vibes. Bold Bites.</span><span>Where Taste Takes Root.</span><span>Green
+                Outside. Great Taste Inside.</span><span>Leaf the Ordinary. Taste the Extraordinary.</span><span>Taste
+                the Green Leaf.</span></div>
+    </div>
 
     <section class="about" id="about">
         <div class="wrap">
@@ -1330,12 +2592,13 @@
                 <div>
                     <div class="brand"
                         style="display:flex;align-items:center;gap:8px;font-family:'Fraunces',serif;font-size:19px;font-weight:700;">
-                        <img src="images/glogo.png" alt="" width="20" height="20">
+                        <img src="images/logoo.png" alt="" width="52" height="52">
                         Green Leaf
                     </div>
                     <p>A premium multicuisine restaurant serving 300+ dishes — South Indian, Chinese, Continental,
                         vegetarian &amp; seafood — in a green, nature-inspired room.</p>
-                    <p style="margin-top:8px;font-family:var(--serif);font-style:italic;color:var(--gold);">Taste the Green Leaf.</p>
+                    <p style="margin-top:8px;font-family:var(--serif);font-style:italic;color:var(--gold);">Taste the
+                        Green Leaf.</p>
                 </div>
                 <div>
                     <h3>New on the menu</h3>
@@ -1360,7 +2623,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="bottom-bar">Copyright &copy; 2026 Green Leaf Multicuisine Restaurant. All rights reserved. Leaf the ordinary. Taste the extraordinary.
+            <div class="bottom-bar">Copyright &copy; 2026 Green Leaf Multicuisine Restaurant. All rights reserved. Leaf
+                the ordinary. Taste the extraordinary.
             </div>
         </div>
     </footer>
